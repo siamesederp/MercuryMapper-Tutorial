@@ -1,0 +1,6 @@
+.md-typeset h2, .md-typeset h3, .md-typeset h4, .md-typeset h5 {
+    margin-top: 0.5em;
+}
+.md-typeset h1 {
+    margin: 0px;
+}
