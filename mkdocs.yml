@@ -1,0 +1,62 @@
+site_name: MercuryMapper Tutorial
+site_url: https://siamesederp.github.io/MercuryMapper-Tutorial/
+site_description: A tutorial for MercuryMapper and WACCA charting
+repo_url: https://github.com/siamesederp/MercuryMapper-Tutorial
+repo_name: GitHub
+theme:
+  name: material
+  palette:
+    # Toggle for auto mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    # Toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+  icon:
+    admonition:
+      note: fontawesome/solid/note-sticky
+      info: fontawesome/solid/circle-info
+      tip: fontawesome/solid/bullhorn
+      success: fontawesome/solid/check
+      question: fontawesome/solid/circle-question
+      warning: fontawesome/solid/triangle-exclamation
+      failure: fontawesome/solid/bomb
+      danger: fontawesome/solid/circle-xmark
+      bug: fontawesome/solid/robot
+      example: fontawesome/solid/flask
+      quote: fontawesome/solid/quote-left
+  features:
+    - content.tooltips
+extra_css:
+  - stylesheets/extra.css
+plugins:
+  - search
+  - awesome-nav
+  - git-revision-date-localized
+markdown_extensions:
+  - abbr
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
+  - admonition
+  - image_titles
+  - pymdownx.details
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
