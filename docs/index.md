@@ -23,7 +23,7 @@
 
     ---
 
-    A lightweight WACCA simulator built from the ground up in unity.
+    A lightweight WACCA simulator built from the ground up in unity, still in development and not available yet.
 
     [:octicons-arrow-right-24: Read More](https://saturn.yasu3d.art/docs/#/)
 

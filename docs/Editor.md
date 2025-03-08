@@ -37,7 +37,7 @@
 3. Ensure the song is synced so that the first beat lands at the start of a measure, you can use `Generate -> BPM Labels` to check this.
 
 !!! warning "BPM Labels is not a stock plugin"
-	If you don't have it, download it here: [`bpm-labels.ny`](https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/resource/bpm-labels.ny)
+	If you don't have it, download it here: [`bpm-labels.ny`](https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/resource/bpm-labels.zip)
 
 Example image, where the audio starts on measure 2 and the first played beat is on measure 4:
 ![BPM_Label_Image](https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/BPM_Label.png)
@@ -327,7 +327,7 @@ This is a list of all the keybinds the editor uses, grouping is the same as the 
 	<h3>`Draw No-Render Holds` - No-Render hold segments are used exclusively for judgement, and as the name implies, are not rendered</h3>
 	***
 	<h3>`Show Timing Windows` - Shows the timing windows of each note</h3>
-	<h4><ul><li>It's recommended to enable `Cut Early on Holds` and `Cut Overlapping` with all windows enabled to ensure all patterns are possible/fair to hit, see [Game Mechanics](https://siamesederp.github.io/MercuryMapper-Tutorial/charting#note-judgement) for more info</li></ul></h4>
+	<h4><ul><li>It's recommended to enable `Cut Early on Holds` and `Cut Overlapping` with all windows enabled to ensure all patterns are possible/fair to hit, see [Game Mechanics](https://siamesederp.github.io/MercuryMapper-Tutorial/Charting#note-judgement) for more info</li></ul></h4>
 	***
 	<h3>`Music Volume` - A controls music volume
 	<h3>`Hitsound Volume` - Changes all hitsounds volume</h3>
@@ -414,7 +414,7 @@ This is a list of all the keybinds the editor uses, grouping is the same as the 
 - If a hold that moves/changes size is in the view port during a really slow hispeed (under 0.01), the game may have issues/crash.
 ####Stop
 - Stops the movement of notes, effectively a 0 hispeed
-- If a hold that moves/changes size is in the view port during a stop, the game may have issues/crash.
+- Mixing Stop gimmicks with Hi-Speed gimmicks will result in unintended behavior, so it is generally not recommended (does not apply to Saturn)
 ####Reverse
 - Creates a section where notes scroll backward before playing back normally
 - Almost exclusively used when referencing another game that does it

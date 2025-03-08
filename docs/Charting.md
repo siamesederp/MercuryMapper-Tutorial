@@ -26,10 +26,11 @@ Charts must follow a specific set of guidelines:
 
 Keep in mind lines of symmetry (there are 60 of them), especially to help keep a chart feeling fresh. However it’s generally better to just use the bottom third of the circle for the most part as reading patterns from the top is generally less common unless the chart flows up there.
 
-Player momentum and inertia is important to keep in mind while charting. Transitions that jump from patterns that “lock” the player into position into movements that require the player to move quickly around the ring may be uncomfortable. Higher rating charts can get away with faster transitions as players are expected to be able to react to these patterns.
-one 
-!!! danger "Avoid opposing direction swipes and snaps within a 16th measure.
-	Allow for at least an 8th measure between each input. One or two may be ok but left unchecked can become aggravating to play. Consider using chains in place of the proceeding swipes/snaps. This rule can be more lenient or strict as it is BPM dependent."
+Player momentum and inertia is important to keep in mind while charting. For example, a jump from a pattern that “locks” the player into position into movements that require the player to move quickly around the ring may be uncomfortable. Higher rating charts can get away with faster transitions as players are expected to be able to react to these patterns. 
+
+!!! danger "Avoid opposing direction swipes and snaps spaced at a 16th measure apart"
+	Allow for at least an 8th measure between each input. One or two tighter swipes/snaps may be ok. Left unchecked though, these patterns can become aggravating to play. Consider using chains in place of the proceeding swipes/snaps. This rule can be more lenient or strict as it is BPM dependent.
+
 ***
 ## Top Half vs Bottom Half
 !!! info "Numbers referenced here correlate to positions on a clock"
@@ -82,8 +83,8 @@ Note Type|Good Timing Window in frames (Early/Late)|Great Timing Window in frame
 Touch|6/6|5/5|3/3
 Snap (Red)|10/-|8/10|5/7
 Snap (Blue)|-/10|10/8|7/5
-Slide (Orange)| 10/-|8/10|5/7
-Slide (Green)| 10/-|8/10|5/7
+Slide (Orange)| 10/-|8/10|5/5
+Slide (Green)| 10/-|8/10|5/5
 Hold|6/6|5/5|3/3
 Hold End|if released for >250ms then re-held|-/-|7/7
 Chain|-/-|-/-|4/4
@@ -107,7 +108,7 @@ Jumps|A pattern forcing quick jumps from one side of the ring to another.|![回�
 One-handed chord (aka bracket or just chord)|Two notes meant to be hit with one hand|![Ready Go [Expert 12] ｜ Measure 14](https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/1hc.png)
 Two-handed chord (aka “Double”)|Two notes meant to be hit with both hands/one hand each.|![Dimension Hacker [Inferno 14] ｜ Measure 17](https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/2hc.png)
 Cross hands / Cross over|Patterns which require the player to cross one arm over/under another arm|![Purple Skies [Expert 12] ｜ Measure 27](https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/crossover.png)
-Tap Slides a.k.a. Fake Slides|Consecutive tap notes that expect the player to slide the note rather than tap them. This can either be sliding/scrubbing in a static position or following the position of consecutive notes. This works due to how judgment windows for notes work (see: [Note Judgement](http://localhost:8000/MercuryMapper-Tutorial/2_charting/#note-judgement)). Compared to a similar slide using only chain notes, this pattern requires the player to be moving the entire way through the pattern to register each note. This is mostly restricted to level 13+ and higher.|![BPM=RT [Expert 13+] ｜ Measure 22](https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/tapslide.png)![ソロモン・ナイト/ Solomon Night [Expert 13] ｜ Measure 78](https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/fakeslide.png)
+Tap Slides a.k.a. Fake Slides|Consecutive tap notes that expect the player to slide the note rather than tap them. This can either be sliding/scrubbing in a static position or following the position of consecutive notes. This works due to how judgment windows for notes work (see: [Note Judgement](https://siamesederp.github.io/MercuryMapper-Tutorial/Charting/#note-judgement)). Compared to a similar slide using only chain notes, this pattern requires the player to be moving the entire way through the pattern to register each note. This is mostly restricted to level 13+ and higher.|![BPM=RT [Expert 13+] ｜ Measure 22](https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/tapslide.png)![ソロモン・ナイト/ Solomon Night [Expert 13] ｜ Measure 78](https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/fakeslide.png)
 Multi-swipe snap patterns|Swipe and snap patterns that appear on the same Beat|![インドア系ならトラックメイカー/Trackmaker [Expert 12+] ｜ Measure 59](https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/trackmaker.png) ^(This swipe style is also called called Trackmaker)^![Gashatt [Expert 12] ｜ Measure 44](https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/multi_swipe.png)
 
 ***
@@ -257,7 +258,7 @@ Common tech that is seen in Experts:
 - Multi hold patterns, requiring use of thumbs or individual fingers
 - Full ring notes
 
-(see [Terminology](http://localhost:8000/MercuryMapper-Tutorial/2_charting/#terminology) for definitions) 
+(see [Terminology](https://siamesederp.github.io/MercuryMapper-Tutorial/Charting/#terminology) for definitions) 
 
 Difficulty of Expert charts tend to correlate to the number of tech patterns used in a chart. Lower level Experts employ a few patterns to make them distinct. Upper level Experts will expect the player to utilize more tech skill sets.
 
