@@ -48,7 +48,7 @@ Example image, where the audio starts on measure 2 and the first played beat is 
 2. Set the BPM and Time Signature here, if you don't have them you can usually find them pretty easily or calculate them yourself.
 3. In the right of the editor, open `Chart Info` and fill out all the information. 
 
-	3.1. See the [User Interface Section](https://rentry.org/MercuryMapper/#right) if any fields are confusing 
+	3.1. See the [User Interface Section](https://siamesederp.github.io/MercuryMapper-Tutorial/Editor/#right) if any fields are confusing 
 
 *** 
 ## Basics
@@ -310,7 +310,7 @@ This is a list of all the keybinds the editor uses, grouping is the same as the 
 	<h3>`Preview` - Preview start/length fields are the time in seconds for where the preview starts/how long it lasts respectively</h3>
 	<h4><ul><li>The preview time is used for what is heard during song select and song preview</li><li>The preview button will play the section that would be previewed and then stop</li></ul></h4>
 	***
-	<h3>`BGM Offset` - Offsets the audio relative to the chart, it's recommended to synchronize the audio itself (see: [Setting Up Audio](https://rentry.org/MercuryMapper/#setting-up-audio))</h3>
+	<h3>`BGM Offset` - Offsets the audio relative to the chart, it's recommended to synchronize the audio itself (see: [Setting Up Audio](https://siamesederp.github.io/MercuryMapper-Tutorial/Editor/#setting-up-audio))</h3>
 	<h3>`BGM` - Button to select the audio file for the chart, displays the currently loaded BGMs' filename below the selection button</h3>
 	***
 	<h3>`BGA` - The `Background Animation` (aka Movie/Video), does not display in-editor</h3>
@@ -406,7 +406,7 @@ This is a list of all the keybinds the editor uses, grouping is the same as the 
 	- Highlighting (Red) is used to select certain notes (useful when overlaps are present) and to view information in the `Selection Info` tab
 	- Selecting (Blue) doesn't show info in the `Selection Info` tab and can select multiple notes at once.
 - To delete a note, either undo with `Ctrl + Z` or select a note and press `Delete`/click `Delete Selection` in the `Modify Notes` tab.
-- To edit the type/size, you can use the [Edit Note](https://rentry.org/MercuryMapper/#edit-notes) binds or use the `Edit [Shape]` and `Edit [Type]` buttons to change the selected note into the shape/type of the currently selected shape/type.
+- To edit the type/size, you can use the edit note keybinds or use the `Edit [Shape]` and `Edit [Type]` buttons to change the selected note into the shape/type of the currently selected shape/type.
 - MercuryMapper converts copied sections to text in modern versions, so you can paste between windows or even paste into discord to share a pattern.
 ###Gimmicks
 ####Hi-Speed

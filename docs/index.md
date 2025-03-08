@@ -9,7 +9,7 @@
 
     Get started with the chart editor, from installation to basic navigation, so you can begin creating your own charts.
 
-    [:octicons-arrow-right-24: Installing the editor](editor)
+    [:octicons-arrow-right-24: Installing the editor](Editor)
 
 -   :fontawesome-solid-book:{ .lg .middle } __Read the best practices for charting__
 
@@ -17,7 +17,7 @@
 
     Learn how to make proper charts, from general rules and guides to game mechanics and decoratives.
 
-    [:octicons-arrow-right-24: Chart Preparation](charting)
+    [:octicons-arrow-right-24: Chart Preparation](Charting)
 
 -   <span class="twemoji lg middle"><img src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/saturn.png" alt="Saturn Logo"></span> __Saturn__
 
