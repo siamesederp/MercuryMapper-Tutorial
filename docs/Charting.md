@@ -53,17 +53,201 @@ The majority of the game is played in the lower half of the ring (4 - 8). Semi-f
 ***
 ## Game Mechanics
 ### Note Types
-Note Type|When to use|Comments
-:---:|-----|-----
-![Touch Note](https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/note_touch.png)|<ul><li>Complex tap patterns easier to read than complex swipe/snap patterns due to simple input</li><li>Chording can be used to place emphasis on a specific note instead of using a Snap/Slide</li></ul>|<ul><li>General use for most sounds. Aside from certain gimmick charts, is the most common note type</li><li>Due to simpler input, is generally used more in complex patterns</li></ul>
-![Snap Outward Note](https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/note_snap_out.png)|<ul><li>Can be used to end a touch pattern or end of a hold note</li><li>Due to more complex input, generally not used in super dense patterns</li><li>Can be used to place emphasis on a specific sound or on a kick</li></ul>|<ul><li>Asymmetric timing window</li></ul>
-![Snap Inward Note](https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/note_snap_in.png)|<ul><li>Can be used to end a touch pattern or end of a hold note</li><li>Due to more complex input, generally not used in super dense patterns</li><li>Can be used to place emphasis on a specific sound or on a kick</li></ul>|<ul><li>Generally considered to be the harder note type to input</li><li>Asymmetric timing window
-![Slide Left Note](https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/note_slide_left.png)|<ul><li>Can be used to end a touch pattern or end of a hold note</li><li>Due to more complex input, generally not used in super dense patterns</li><li>Can be used to place emphasis on a specific sound or on a kick</li></ul>|<ul><li>Asymmetric timing window</li></ul>
-![Slide Right Note](https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/note_slide_right.png)|<ul><li>Can be used to end a touch pattern or end of a hold note</li><li>Due to more complex input, generally not used in super dense patterns</li><li>Can be used to place emphasis on a specific sound or on a kick</li></ul>|<ul><li>Asymmetric timing window</li></ul>
-![Hold Note](https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/note_hold.png)|<ul><li>Generally used to indicate an extended sound, but can also be mixed with other note types for more technical sections regardless of what the music is (this is typically done in EXP or INF only)</li><li>Can be used to help break up a syncopated section|<ul><li>Compared to other games, has a somewhat generous release window (250ms)</li></ul>
-![Chain Note](https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/note_chain.png)|<ul><li>Can be used for dense sections i.e. 16th notes at 300 bpm|<ul><li>While having a guaranteed window if inputted, due to the slightly smaller overall input window (see Note Judgment below), this can be harder to hit if replacing Touch notes for the same pattern</li></ul>
-![R Note](https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/note_r.png)|<ul><li>Can be used to place greater emphasis on a specific sound</li><li>Amount of usage can be preference, but consider comments to the right|<ul><li>Available for all above note types</li><li>Plays a louder hit sound than other notes</li><li>Worth 2x the score of a regular note</li><li>The more R notes in a chart the lower the value of the non-R notes</li></ul>
-![Bonus Note](https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/note_bonus.png)|<ul><li>Can be used to place emphasis on a specific sound</li><li>Due to the Touch note Bonus sound being distinctly different (less percussion) from a normal Touch note, can be used to represent a variance in sound in a given song</li><li>Can be used more liberally without affecting scoring|<ul><li>Available only for Touch and Slide (Left or Right) note types</li><li>Plays a different hitsound compared to regular notes</li><li>Bonus Touch note hitsound plays a more distinctly different hitsound in game compared to Bonus slide notes</li><li>No effect on scoring, grants more life for the clear bar instead</li></ul>
+<table>
+    <thead>
+        <tr>
+            <th style="text-align: center;">Note Type</th>
+            <th>When to use</th>
+            <th>Comments</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="text-align: center;">
+				<figure markdown="span">
+ 					<img src = "https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/note_touch.png">
+  						<figcaption>Touch Note</figcaption>
+				</figure>
+            </td>
+            <td>
+                <ul>
+                    <li>Complex tap patterns easier to read than complex swipe/snap patterns due to simple input</li>
+                    <li>Chording can be used to place emphasis on a specific note instead of using a Snap/Slide</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>General use for most sounds. Aside from certain gimmick charts, is the most common note type</li>
+                    <li>Due to simpler input, is generally used more in complex patterns</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">
+				<figure markdown="span">
+ 					<img src = "https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/note_snap_out.png">
+  						<figcaption>Snap Outward Note</figcaption>
+				</figure>
+            </td>
+            <td>
+                <ul>
+                    <li>Can be used to end a touch pattern or end of a hold note</li>
+                    <li>Due to more complex input, generally not used in super dense patterns</li>
+                    <li>Can be used to place emphasis on a specific sound or on a kick</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>Asymmetric timing window</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">
+				<figure markdown="span">
+ 					<img src = "https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/note_snap_in.png">
+  						<figcaption>Snap Inward Note</figcaption>
+				</figure>
+            </td>
+            <td>
+                <ul>
+                    <li>Can be used to end a touch pattern or end of a hold note</li>
+                    <li>Due to more complex input, generally not used in super dense patterns</li>
+                    <li>Can be used to place emphasis on a specific sound or on a kick</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>Generally considered to be the harder note type to input</li>
+                    <li>Asymmetric timing window</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">
+				<figure markdown="span">
+ 					<img src = "https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/note_slide_left.png">
+  						<figcaption>Slide Left Note</figcaption>
+				</figure>
+            </td>
+            <td>
+                <ul>
+                    <li>Can be used to end a touch pattern or end of a hold note</li>
+                    <li>Due to more complex input, generally not used in super dense patterns</li>
+                    <li>Can be used to place emphasis on a specific sound or on a kick</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>Asymmetric timing window</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">
+				<figure markdown="span">
+ 					<img src = "https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/note_slide_right.png">
+  						<figcaption>Slide Right Note</figcaption>
+				</figure>
+            </td>
+            <td>
+                <ul>
+                    <li>Can be used to end a touch pattern or end of a hold note</li>
+                    <li>Due to more complex input, generally not used in super dense patterns</li>
+                    <li>Can be used to place emphasis on a specific sound or on a kick</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>Asymmetric timing window</li>
+                </ul>
+            </td>
+		</tr>
+		<tr>
+			<td>
+				<figure markdown="span">
+ 					<img src = "https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/note_hold.png">
+  						<figcaption>Hold Note</figcaption>
+				</figure>
+			</td>
+			<td>
+				<ul>
+					<li>Generally used to indicate an extended sound, but can also be mixed with other note types for more technical sections regardless of what the music is (this is typically done in EXP or INF only)</li>
+					<li>Can be used to help break up a syncopated section</li>
+				</ul>
+			</td>
+			<td>
+				<ul>
+					<li>Compared to other games, has a somewhat generous release window (250ms)</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<figure markdown="span">
+ 					<img src = "https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/note_chain.png">
+  						<figcaption>Chain Note</figcaption>
+				</figure>
+			</td>
+			<td>
+				<ul>
+					<li>Can be used for dense sections i.e. 16th notes at 300 bpm</li>
+				</ul>
+			</td>
+			<td>
+				<ul>
+					<li>While having a guaranteed window if inputted, due to the slightly smaller overall input window (see Note Judgment below), this can be harder to hit if replacing Touch notes for the same pattern</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<figure markdown="span">
+ 					<img src = "https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/note_r.png">
+  						<figcaption>R Note</figcaption>
+				</figure>
+			</td>
+			<td>
+				<ul>
+					<li>Can be used to place greater emphasis on a specific sound</li>
+					<li>Amount of usage can be preference, but consider comments to the right</li>
+				</ul>
+			</td>
+			<td>
+				<ul>
+					<li>Available for all above note types</li>
+					<li>Plays a louder hit sound than other notes</li>
+					<li>Worth 2x the score of a regular note</li>
+					<li>The more R notes in a chart the lower the value of the non-R notes</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<figure markdown="span">
+ 					<img src = "https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/note_bonus.png">
+  						<figcaption>Bonus Note</figcaption>
+				</figure>
+			</td>
+			<td>
+				<ul>
+					<li>Can be used to place emphasis on a specific sound</li>
+					<li>Due to the Touch note Bonus sound being distinctly different (less percussion) from a normal Touch note, can be used to represent a variance in sound in a given song</li>
+					<li>Can be used more liberally without affecting scoring
+				</ul>
+			</td>
+			<td>
+				<ul>
+					<li>Available only for Touch and Slide (Left or Right) note types</li>
+					<li>Plays a different hitsound compared to regular notes</li>
+					<li>Bonus Touch note hitsound plays a more distinctly different hitsound in game compared to Bonus slide notes</li>
+					<li>No effect on scoring, grants more life for the clear bar instead</li>
+				</ul>
+			</td>
+        </tr>
+	</tbody>
+</table>
+
 
 ### Note Judgement
 WACCA’s timing system functions in a similar way to Chunithm; if two or more notes are within close proximity to each other, their judgment windows get cut off.
@@ -188,7 +372,7 @@ Be mindful of how slow downs and speed ups are transitioned into. Accelerate and
 
 !!! danger "Stops (Hi-speed < 0.01) are notorious for causing the game to act funny or even freeze the game. Be mindful of using them and test the chart extensively."
 
-Other gimmicks like the built in reverse are complicated systems usually reserved for specific charts in the game (Like you are the miserable). They’re very finicky and can easily break a chart if not used correctly. The same goes for the built in Stop system, it is recommended to use Hi-speed values for this purpose instead.
+Other gimmicks like the built in reverse are complicated systems usually reserved for specific charts in the game (like `You are the Miserable 「Lanota」` or `Stasis 「Lanota」`). They’re very finicky and can easily break a chart if not used correctly. The same goes for the built in Stop system, it is recommended to use Hi-speed values for this purpose instead.
 
 ***
 ### Chains on Hold Notes
@@ -220,7 +404,7 @@ Up / down snaps are rare in Normal charts below 6. Avoid using them and stick to
 
 Mask effects at this level should be very minimal as they can be very distracting for newer players
 
-Refer to [this playlist](https://www.youtube.com/playlist?list=PLkt3uTWW5wfvvAn0Uwk7geTgpRr20k-zW) to get a good grasp on how Normal charts should flow.
+Refer to [curtain call normals](https://youtube.com/playlist?list=PLGZO-9nKrOGMj2W9A1jbTFZ6JRyKHTqyx) and [this playlist](https://www.youtube.com/playlist?list=PLkt3uTWW5wfvvAn0Uwk7geTgpRr20k-zW) to get a good grasp on how Normal charts should flow.
 
 ***
 ## Hard Charting
@@ -241,6 +425,9 @@ There’s kinda a split in Hard charts - the single digits are just mostly more 
 While base game Hards do not use high-speed changes at all, if you do decide to use them then the chart is a 10 at minimum, and be very cautious while in use. For instance, don’t expect the player to hit more than 1 note (or a chord) with a slowdown, and that note should be the only thing visible.
 
 [playlist of base game hards](https://youtube.com/playlist?list=PLrLB1VP-BXs4ohrcRyCksn8hFyeUr77Gg)
+[Hards 6+ to 8+](https://youtube.com/playlist?list=PLGZO-9nKrOGMejsBGgVemktMIJ96zsK3E)
+[Hards 9 to 11+](https://youtube.com/playlist?list=PLGZO-9nKrOGMLAaPscf_lWovCH2jfuiim)
+
 ***
 ## Expert Charting
 **Expert Characteristics: may require some studying, moderate difficulty to execute**

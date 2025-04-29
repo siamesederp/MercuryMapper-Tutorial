@@ -2,14 +2,21 @@
 ## Installing the editor
 ### Download
 ??? info ":fontawesome-brands-windows: Windows/:fontawesome-brands-linux:Linux"
-	1. Go to the [MercuryMapper GitHub repository](https://github.com/Yasu3D/MercuryMapper).
-	2. In the **Releases** section, find the latest release (it’s usually at the top of the list).
-	3. Under the latest release, find the assets section and download `MercuryMapper-Win-Portable.zip` or `MercuryMapper-Linux-x64.zip`.
-	4. Alternatively, you can download from one of these links:
+	
+	1. You can download the editor from these URLs:
 
 		[:fontawesome-brands-windows: Windows](https://github.com/Yasu3D/MercuryMapper/releases/latest/download/MercuryMapper-Win-Portable.zip)
 
 		[:fontawesome-brands-linux: Linux (x64)](https://github.com/Yasu3D/MercuryMapper/releases/latest/download/MercuryMapper-Linux-x64.zip)
+
+		[<span class="twemoji lg middle"><img src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/arch.png" alt="Arch Linux Logo"></span> AUR (Binary)](https://aur.archlinux.org/packages/mercury-mapper-bin)
+
+		[<span class="twemoji lg middle"><img src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/arch.png" alt="Arch Linux Logo"></span> AUR (Source)](https://aur.archlinux.org/packages/mercury-mapper)
+
+	2. Alternatively, you can download from github
+	3. Go to the [MercuryMapper GitHub repository](https://github.com/Yasu3D/MercuryMapper).
+	4. In the **Releases** section, find the latest release (it’s usually at the top of the list).
+	5. Under the latest release, find the assets section and download the version for your operating system.
 
 ??? info ":fontawesome-brands-apple: OS X"
 	Due to the requirements to develop for mac, the mac version is seperately maintained by h3llo_wor1d. (No guarantees this works/doesn't break)
@@ -20,6 +27,8 @@
 	4. Alternatively, you can download from one of these links: </div>
 
 	[:fontawesome-brands-apple: OS X (ARM64)](https://github.com/h3llo-wor1d/mercury-mac/releases/download/v1/osx-arm64.zip)
+
+	Requires [.NET 8.0.12](https://versionsof.net/core/8.0/8.0.12/)
 
 ### Install
 !!! info "This is for Windows, but the core concepts can be transferred to other operating systems."
@@ -42,7 +51,21 @@
 Example image, where the audio starts on measure 2 and the first played beat is on measure 4:
 ![BPM_Label_Image](https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/BPM_Label.png)
 
-4. Export the edited audio using `File -> Export Audio`, It's recommend to export as WAV as it tends to work the best.
+4. Export the edited audio using `File -> Export Audio`, It's recommend to export as WAV as it tends to work the best. 
+
+#### Reaper
+1. Open [Reaper](https://www.reaper.fm/download.php) 
+2. If this is your first time running reaper, make sure Grid Lines are enabled: ![Grid_Lines_Toggle](https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/Reaper_Grid.png)  
+  Then, go to `File -> Project Settings`, change `Timebase for items/envelopes/markers` to Time, and click `Save as default project settings` ![Default_Project_Settings](https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/Reaper_Defaults.png)
+3. Drag and drop your audio, or use `Insert -> Media File`
+4. Set your song's BPM on the bottom right
+5. Hold shift+click to drag the track without grid snapping, and time the audio to the measure line.
+6. If you need to add measures, expand (click and drag) the left edge of your track until it snaps to a measure line, then click and drag the track to move it around.
+
+*** 
+## Basics
+***
+
 ### Initial Chart Setup
 1. In the editor, select `File -> New` to create a new chart.
 2. Set the BPM and Time Signature here, if you don't have them you can usually find them pretty easily or calculate them yourself.
@@ -50,17 +73,14 @@ Example image, where the audio starts on measure 2 and the first played beat is 
 
 	3.1. See the [User Interface Section](https://siamesederp.github.io/MercuryMapper-Tutorial/Editor/#right) if any fields are confusing 
 
-*** 
-## Basics
-***
-###Hitsounds
+### Hitsounds
 Download the hitsounds zip here: [`hitsounds.zip`](https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/resource/hitsounds.zip).
 
 Right-click the `hitsounds.zip` file and select **Extract All** or use a tool like [7zip](https://7-zip.org/) to extract it.
 
 Open the settings, then select Audio, from here you can change hitsound volume and assign the audio files to each hitsound type.
 
-###Keybinds
+### Keybinds
 
 !!! note "These are rebindable!"
 
@@ -222,8 +242,8 @@ This is a list of all the keybinds the editor uses, grouping is the same as the 
 
 	`Shift + Subtract` - Decrease note speed
 
-###User Interface
-####Top
+### User Interface
+#### Top
 ??? info "File"
 	<h3>`New` - Create a new chart<h3>
 	<h3>`Open` - Open an existing chart</h3>
@@ -282,10 +302,10 @@ This is a list of all the keybinds the editor uses, grouping is the same as the 
 	***
 	<h3>`Proofread` - Checks for problems with your chart, very sensitive so will point out legal patterns. It's recommended to check anywhere it warns to ensure the chart follows good practices.</h3>
 
-####Left
+#### Left
 <div comment="very ugly, should be replaced"></div>
 ![Bottom UI](https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/UI_Left.png)
-####Right
+#### Right
 ??? info "Chart Info"
 	<h3>The Current Filename</h3>
 	***
@@ -368,11 +388,11 @@ This is a list of all the keybinds the editor uses, grouping is the same as the 
 	<h3>`Add Comment` - Adds a comment at the current measure.</h3>
 	<h3>`Set Loop Start/End` - Place either a loop start or loop end at the current measure, visualized on the playback slider as a green and red line respectively</h3>
 
-####Bottom
+#### Bottom
 <div comment="very ugly, should be replaced"></div>
 ![Bottom UI](https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/UI_Bottom.png)
 
-###Settings
+### Settings
 <div comment = "Need to finish" style = "display:none">
 ??? info "Appearance"
 	<h2>***Colors***</h2>
@@ -392,15 +412,15 @@ This is a list of all the keybinds the editor uses, grouping is the same as the 
 	<h3>`Constant Metronome`</h3>
 </div>
 
-###Note Placement
+### Note Placement
 - You can adjust note size and position by clicking and dragging in the viewport or with the sliders found in Current Note Settings on the left.
 - Place notes by pressing `I` or by clicking the button under those sliders.
 - Select note type with the colored buttons in the top left or by pressing number keys.
 - Place Bonus/R Notes by using the buttons under the note type panel to change bonus type.
-####Holds
+#### Holds
 - Once you place a hold note, you can only place hold segments until you finish the hold note.
 - To finish a hold note place the last segment and then click the `End Note Collection` button next to the insert button.
-####Selecting, Editing, Deleting
+#### Selecting, Editing, Deleting
 - To select a specific note, `Ctrl + Left Click` or scroll to it and click `Nearest` in the `Selection Info` tab. If there are multiple notes at once, you can click `< Previous` or `Next >` while highlighing to cycle though them.
 - Highlighting and Selecting are two different things
 	- Highlighting (Red) is used to select certain notes (useful when overlaps are present) and to view information in the `Selection Info` tab
@@ -408,13 +428,14 @@ This is a list of all the keybinds the editor uses, grouping is the same as the 
 - To delete a note, either undo with `Ctrl + Z` or select a note and press `Delete`/click `Delete Selection` in the `Modify Notes` tab.
 - To edit the type/size, you can use the edit note keybinds or use the `Edit [Shape]` and `Edit [Type]` buttons to change the selected note into the shape/type of the currently selected shape/type.
 - MercuryMapper converts copied sections to text in modern versions, so you can paste between windows or even paste into discord to share a pattern.
-###Gimmicks
-####Hi-Speed
+### Gimmicks
+#### Hi-Speed
 - Can be used to slow down or speed up the scroll speed
 - If a hold that moves/changes size is in the view port during a really slow hispeed (under 0.01), the game may have issues/crash.
-####Stop
+#### Stop
 - Stops the movement of notes, effectively a 0 hispeed
 - Mixing Stop gimmicks with Hi-Speed gimmicks will result in unintended behavior, so it is generally not recommended (does not apply to Saturn)
-####Reverse
+#### Reverse
 - Creates a section where notes scroll backward before playing back normally
 - Almost exclusively used when referencing another game that does it
+- Mixing Reverse gimmicks with any other gimmick *will* cause crashes. Please leave plenty of space after the reverse end

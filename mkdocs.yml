@@ -23,6 +23,8 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
+  logo: https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/MercuryMapperIcon.png
+  favicon: https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/MercuryMapperIcon.png
   icon:
     admonition:
       note: fontawesome/solid/note-sticky
