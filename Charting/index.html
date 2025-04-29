@@ -1,0 +1,1564 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A tutorial for MercuryMapper and WACCA charting">
+      
+      
+      
+        <link rel="canonical" href="https://siamesederp.github.io/MercuryMapper-Tutorial/Charting/">
+      
+      
+        <link rel="prev" href="../Editor/">
+      
+      
+        <link rel="next" href="../Hold_Art/">
+      
+      
+      <link rel="icon" href="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/MercuryMapperIcon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Charting - MercuryMapper Tutorial</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M64%2032C28.7%2032%200%2060.7%200%2096v320c0%2035.3%2028.7%2064%2064%2064h224V368c0-26.5%2021.5-48%2048-48h112V96c0-35.3-28.7-64-64-64zm384%20320H336c-8.8%200-16%207.2-16%2016v112l32-32%2064-64z%22/%3E%3C/svg%3E');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M256%20512a256%20256%200%201%200%200-512%20256%20256%200%201%200%200%20512m-40-176h24v-64h-24c-13.3%200-24-10.7-24-24s10.7-24%2024-24h48c13.3%200%2024%2010.7%2024%2024v88h8c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-80c-13.3%200-24-10.7-24-24s10.7-24%2024-24m40-208a32%2032%200%201%201%200%2064%2032%2032%200%201%201%200-64%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M480%2032c0-12.9-7.8-24.6-19.8-29.6S434.5.2%20425.3%209.3L381.7%2053c-48%2048-113.1%2075-181%2075H64c-35.3%200-64%2028.7-64%2064v96c0%2035.3%2028.7%2064%2064%2064v128c0%2017.7%2014.3%2032%2032%2032h64c17.7%200%2032-14.3%2032-32V352h8.7c67.9%200%20133%2027%20181%2075l43.6%2043.6c9.2%209.2%2022.9%2011.9%2034.9%206.9s19.8-16.6%2019.8-29.6V300.3c18.6-8.8%2032-32.5%2032-60.4s-13.4-51.6-32-60.4zm-64%2076.7v262.6C357.2%20317.8%20280.5%20288%20200.7%20288H192v-96h8.7c79.8%200%20156.5-29.8%20215.3-83.3%22/%3E%3C/svg%3E');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M438.6%20105.4c12.5%2012.5%2012.5%2032.8%200%2045.3l-256%20256c-12.5%2012.5-32.8%2012.5-45.3%200l-128-128c-12.5-12.5-12.5-32.8%200-45.3s32.8-12.5%2045.3%200L160%20338.7l233.4-233.3c12.5-12.5%2032.8-12.5%2045.3%200z%22/%3E%3C/svg%3E');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M256%20512a256%20256%200%201%200%200-512%20256%20256%200%201%200%200%20512m-86.2-346.7c7.9-22.3%2029.1-37.3%2052.8-37.3h58.3c34.9%200%2063.1%2028.3%2063.1%2063.1%200%2022.6-12.1%2043.5-31.7%2054.8L280%20264.4c-.2%2013-10.9%2023.6-24%2023.6-13.3%200-24-10.7-24-24v-13.5c0-8.6%204.6-16.5%2012.1-20.8l44.3-25.4c4.7-2.7%207.6-7.7%207.6-13.1%200-8.4-6.8-15.1-15.1-15.1h-58.3c-3.4%200-6.4%202.1-7.5%205.3l-.4%201.2c-4.4%2012.5-18.2%2019-30.6%2014.6s-19-18.2-14.6-30.6l.4-1.2zM224%20352a32%2032%200%201%201%2064%200%2032%2032%200%201%201-64%200%22/%3E%3C/svg%3E');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M256%2032c14.2%200%2027.3%207.5%2034.5%2019.8l216%20368c7.3%2012.4%207.3%2027.7.2%2040.1S486.3%20480%20472%20480H40c-14.3%200-27.6-7.7-34.7-20.1s-7-27.8.2-40.1l216-368C228.7%2039.5%20241.8%2032%20256%2032m0%20128c-13.3%200-24%2010.7-24%2024v112c0%2013.3%2010.7%2024%2024%2024s24-10.7%2024-24V184c0-13.3-10.7-24-24-24m32%20224a32%2032%200%201%200-64%200%2032%2032%200%201%200%2064%200%22/%3E%3C/svg%3E');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M459.1%2052.4%20442.6%206.5c-1.9-3.9-6.1-6.5-10.5-6.5s-8.5%202.6-10.4%206.5l-16.5%2045.9-46%2016.8c-4.3%201.6-7.3%205.9-7.2%2010.4%200%204.5%203%208.7%207.2%2010.2l45.7%2016.8%2016.8%2045.8c1.5%204.4%205.8%207.5%2010.4%207.5s8.9-3.1%2010.4-7.5l16.5-45.8%2045.7-16.8c4.2-1.5%207.2-5.7%207.2-10.2%200-4.6-3-8.9-7.2-10.4zm-132.4%2053c-12.5-12.5-32.8-12.5-45.3%200l-2.9%202.9c-22-8-45.8-12.3-70.5-12.3C93.1%2096%200%20189.1%200%20304s93.1%20208%20208%20208%20208-93.1%20208-208c0-24.7-4.3-48.5-12.2-70.5l2.9-2.9c12.5-12.5%2012.5-32.8%200-45.3l-80-80zM200%20192c-57.4%200-104%2046.6-104%20104v8c0%208.8-7.2%2016-16%2016s-16-7.2-16-16v-8c0-75.1%2060.9-136%20136-136h8c8.8%200%2016%207.2%2016%2016s-7.2%2016-16%2016z%22/%3E%3C/svg%3E');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M256%20512a256%20256%200%201%200%200-512%20256%20256%200%201%200%200%20512m-81-337c9.4-9.4%2024.6-9.4%2033.9%200l47%2047%2047-47c9.4-9.4%2024.6-9.4%2033.9%200s9.4%2024.6%200%2033.9l-47%2047%2047%2047c9.4%209.4%209.4%2024.6%200%2033.9s-24.6%209.4-33.9%200l-47-47-47%2047c-9.4%209.4-24.6%209.4-33.9%200s-9.4-24.6%200-33.9l47-47-47-47c-9.4-9.4-9.4-24.6%200-33.9%22/%3E%3C/svg%3E');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20640%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M320%200c17.7%200%2032%2014.3%2032%2032v64h120c39.8%200%2072%2032.2%2072%2072v272c0%2039.8-32.2%2072-72%2072H168c-39.8%200-72-32.2-72-72V168c0-39.8%2032.2-72%2072-72h120V32c0-17.7%2014.3-32%2032-32M208%20384c-8.8%200-16%207.2-16%2016s7.2%2016%2016%2016h32c8.8%200%2016-7.2%2016-16s-7.2-16-16-16zm96%200c-8.8%200-16%207.2-16%2016s7.2%2016%2016%2016h32c8.8%200%2016-7.2%2016-16s-7.2-16-16-16zm96%200c-8.8%200-16%207.2-16%2016s7.2%2016%2016%2016h32c8.8%200%2016-7.2%2016-16s-7.2-16-16-16zM264%20256a40%2040%200%201%200-80%200%2040%2040%200%201%200%2080%200m152%2040a40%2040%200%201%200%200-80%2040%2040%200%201%200%200%2080M48%20224h16v192H48c-26.5%200-48-21.5-48-48v-96c0-26.5%2021.5-48%2048-48m544%200c26.5%200%2048%2021.5%2048%2048v96c0%2026.5-21.5%2048-48%2048h-16V224z%22/%3E%3C/svg%3E');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M288%200H128c-17.7%200-32%2014.3-32%2032s14.3%2032%2032%2032v132.8c0%2011.8-3.3%2023.5-9.5%2033.5L10.3%20406.2C3.6%20417.2%200%20429.7%200%20442.6%200%20480.9%2031.1%20512%2069.4%20512h309.2c38.3%200%2069.4-31.1%2069.4-69.4%200-12.8-3.6-25.4-10.3-36.4L329.5%20230.4c-6.2-10.1-9.5-21.7-9.5-33.5V64c17.7%200%2032-14.3%2032-32S337.7%200%20320%200zm-96%20196.8V64h64v132.8c0%2023.7%206.6%2046.9%2019%2067.1l34.5%2056.1h-171l34.5-56.1c12.4-20.2%2019-43.4%2019-67.1%22/%3E%3C/svg%3E');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M0%20216C0%20149.7%2053.7%2096%20120%2096h8c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032h-8c-30.9%200-56%2025.1-56%2056v8h64c35.3%200%2064%2028.7%2064%2064v64c0%2035.3-28.7%2064-64%2064H64c-35.3%200-64-28.7-64-64V216m256%200c0-66.3%2053.7-120%20120-120h8c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032h-8c-30.9%200-56%2025.1-56%2056v8h64c35.3%200%2064%2028.7%2064%2064v64c0%2035.3-28.7%2064-64%2064h-64c-35.3%200-64-28.7-64-64V216%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="MercuryMapper Tutorial" class="md-header__button md-logo" aria-label="MercuryMapper Tutorial" data-md-component="logo">
+      
+  <img src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/MercuryMapperIcon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MercuryMapper Tutorial
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Charting
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/siamesederp/MercuryMapper-Tutorial" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="MercuryMapper Tutorial" class="md-nav__button md-logo" aria-label="MercuryMapper Tutorial" data-md-component="logo">
+      
+  <img src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/MercuryMapperIcon.png" alt="logo">
+
+    </a>
+    MercuryMapper Tutorial
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/siamesederp/MercuryMapper-Tutorial" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Editor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Editor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Charting
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Charting
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chart-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chart Preparation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#note-placement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Note Placement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#top-half-vs-bottom-half" class="md-nav__link">
+    <span class="md-ellipsis">
+      Top Half vs Bottom Half
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hand-parity-and-pattern-placement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hand Parity and Pattern Placement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#game-mechanics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Game Mechanics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Game Mechanics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#note-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Note Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#note-judgement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Note Judgement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Note Judgement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#avenue-ing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Avenue-ing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#terminology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terminology
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#legal-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Legal Patterns
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-guidance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input Guidance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spins
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decoratives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decoratives
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Decoratives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#masks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Masks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hi-speed-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hi-Speed Changes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chains-on-hold-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chains on Hold Notes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#letters-and-other-hold-art" class="md-nav__link">
+    <span class="md-ellipsis">
+      Letters and Other Hold Art
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#normal-charting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Normal Charting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hard-charting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hard Charting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expert-charting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expert Charting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inferno-charting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inferno Charting
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hold_Art/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hold Art
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chart-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chart Preparation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#note-placement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Note Placement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#top-half-vs-bottom-half" class="md-nav__link">
+    <span class="md-ellipsis">
+      Top Half vs Bottom Half
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hand-parity-and-pattern-placement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hand Parity and Pattern Placement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#game-mechanics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Game Mechanics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Game Mechanics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#note-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Note Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#note-judgement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Note Judgement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Note Judgement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#avenue-ing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Avenue-ing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#terminology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terminology
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#legal-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Legal Patterns
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-guidance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input Guidance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spins
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decoratives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decoratives
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Decoratives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#masks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Masks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hi-speed-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hi-Speed Changes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chains-on-hold-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chains on Hold Notes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#letters-and-other-hold-art" class="md-nav__link">
+    <span class="md-ellipsis">
+      Letters and Other Hold Art
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#normal-charting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Normal Charting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hard-charting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hard Charting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expert-charting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expert Charting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inferno-charting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inferno Charting
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="_1"></h1>
+<h2 id="chart-preparation">Chart Preparation</h2>
+<p>Charts must follow a specific set of guidelines:</p>
+<ul>
+<li>1:45 - 3:00 in length</li>
+<li>Can be reasonably argued that it would belong in an official rhythm game<ul>
+<li>Ported songs from other games automatically get a pass</li>
+</ul>
+</li>
+<li>2 empty measures at the beginning of song before the first meaningful beat (eg. start of the chart)<ul>
+<li>this depends on the song (i.e. if the silence is baked into the song already), but at least 1 measure</li>
+<li>If this is not done, your chart will start too abruptly, and possibly overlap with the metronome</li>
+</ul>
+</li>
+<li>End of Chart note is placed at least 1 measure full after the last meaningful input</li>
+</ul>
+<hr />
+<h2 id="note-placement">Note Placement</h2>
+<div class="admonition note">
+<p class="admonition-title">Minimum note size for use should be 10.  However, use at least 12 when possible.</p>
+</div>
+<ul>
+<li>BIGGER IS BETTER, especially on lower difficulties.<ul>
+<li>Really big notes (&gt;20) can lead to visual clutter, calibrate usage scaling into higher difficulties</li>
+</ul>
+</li>
+<li>Smaller notes can be used, but they need to be intentional (repeated pattern, thematic charting, slow sections of song)</li>
+<li>Consider using 14 for CW / CCW swipes to ensure the player can trigger enough sensors</li>
+<li>While starting hand tends to not matter as much in higher difficulties, starting with the right hand is generally preferred as it is the more common dominant hand. Generally chart flow takes precedence over which hand to start with. But from a neutral state, right or both is generally preferred.<ul>
+<li>In the same vein, patterns will generally start on the right of the play area, but keep into account overall flow of the chart</li>
+</ul>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">The wider the movement you want, the bigger the note should be. Direct the player by using the appropriate note sizing.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">No need to chart every note in a song, especially compared to most traditional Rhythm Games.</p>
+<p>Wacca is very arm intensive, so remember to put breaks.  Keep in mind that after a break, you should probably resume charting from the bottom third (so 4-8 on the clock basically) as a person will naturally reset their arms down.</p>
+</div>
+<p>Keep in mind lines of symmetry (there are 60 of them), especially to help keep a chart feeling fresh. However it’s generally better to just use the bottom third of the circle for the most part as reading patterns from the top is generally less common unless the chart flows up there.</p>
+<p>Player momentum and inertia is important to keep in mind while charting. For example, a jump from a pattern that “locks” the player into position into movements that require the player to move quickly around the ring may be uncomfortable. Higher rating charts can get away with faster transitions as players are expected to be able to react to these patterns. </p>
+<div class="admonition danger">
+<p class="admonition-title">Avoid opposing direction swipes and snaps spaced at a 16th measure apart</p>
+<p>Allow for at least an 8th measure between each input. One or two tighter swipes/snaps may be ok. Left unchecked though, these patterns can become aggravating to play. Consider using chains in place of the proceeding swipes/snaps. This rule can be more lenient or strict as it is BPM dependent.</p>
+</div>
+<hr />
+<h2 id="top-half-vs-bottom-half">Top Half vs Bottom Half</h2>
+<div class="admonition info">
+<p class="admonition-title">Numbers referenced here correlate to positions on a clock</p>
+</div>
+<p>The majority of the game is played in the lower half of the ring (4 - 8). Semi-frequent use of 2 - 3 and 9 - 10 positions are common in Experts, less common in Hard / Normal. Hold spins around the entire circle are the exception</p>
+<div class="admonition warning">
+<p class="admonition-title">Top section (10 - 2) note placements should be considered with care.</p>
+<p>Certain patterns are awkward or  difficult to execute when placed on the top side (eg. up/down snap bombs, trills). Down snaps are also quite tricky to hit on the top section. Dense patterns in the top section are also much harder to read.</p>
+</div>
+<hr />
+<h2 id="hand-parity-and-pattern-placement">Hand Parity and Pattern Placement</h2>
+<ul>
+<li>Shadow your charts by playing the chart in the editor to check that your hands end up where you expect the player to be playing.</li>
+<li>Test your chart with consideration that a player may hit notes using hands opposite of how you intend it to be played.</li>
+<li>Most patterns are meant to be hit by alternating hands, only occasionally you will see a pattern where one hand is hitting more than one note in a row.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Cheese is part of the game</p>
+<p>Either chart around it or embrace it. 
+Ensure that all patterns can be resolved, or force the player to not be able to cheese patterns.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Avoid starting dense / difficult patterns with no warning</p>
+<p>(eg. trills on the side of the ring, top side notes with only bottom half patterns preceding).
+Guide the player into patterns by priming them beforehand.</p>
+</div>
+<hr />
+<h2 id="game-mechanics">Game Mechanics</h2>
+<h3 id="note-types">Note Types</h3>
+<table>
+    <thead>
+        <tr>
+            <th style="text-align: center;">Note Type</th>
+            <th>When to use</th>
+            <th>Comments</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="text-align: center;">
+                <figure markdown="span">
+                    <img src = "https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/note_touch.png">
+                        <figcaption>Touch Note</figcaption>
+                </figure>
+            </td>
+            <td>
+                <ul>
+                    <li>Complex tap patterns easier to read than complex swipe/snap patterns due to simple input</li>
+                    <li>Chording can be used to place emphasis on a specific note instead of using a Snap/Slide</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>General use for most sounds. Aside from certain gimmick charts, is the most common note type</li>
+                    <li>Due to simpler input, is generally used more in complex patterns</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">
+                <figure markdown="span">
+                    <img src = "https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/note_snap_out.png">
+                        <figcaption>Snap Outward Note</figcaption>
+                </figure>
+            </td>
+            <td>
+                <ul>
+                    <li>Can be used to end a touch pattern or end of a hold note</li>
+                    <li>Due to more complex input, generally not used in super dense patterns</li>
+                    <li>Can be used to place emphasis on a specific sound or on a kick</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>Asymmetric timing window</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">
+                <figure markdown="span">
+                    <img src = "https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/note_snap_in.png">
+                        <figcaption>Snap Inward Note</figcaption>
+                </figure>
+            </td>
+            <td>
+                <ul>
+                    <li>Can be used to end a touch pattern or end of a hold note</li>
+                    <li>Due to more complex input, generally not used in super dense patterns</li>
+                    <li>Can be used to place emphasis on a specific sound or on a kick</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>Generally considered to be the harder note type to input</li>
+                    <li>Asymmetric timing window</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">
+                <figure markdown="span">
+                    <img src = "https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/note_slide_left.png">
+                        <figcaption>Slide Left Note</figcaption>
+                </figure>
+            </td>
+            <td>
+                <ul>
+                    <li>Can be used to end a touch pattern or end of a hold note</li>
+                    <li>Due to more complex input, generally not used in super dense patterns</li>
+                    <li>Can be used to place emphasis on a specific sound or on a kick</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>Asymmetric timing window</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">
+                <figure markdown="span">
+                    <img src = "https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/note_slide_right.png">
+                        <figcaption>Slide Right Note</figcaption>
+                </figure>
+            </td>
+            <td>
+                <ul>
+                    <li>Can be used to end a touch pattern or end of a hold note</li>
+                    <li>Due to more complex input, generally not used in super dense patterns</li>
+                    <li>Can be used to place emphasis on a specific sound or on a kick</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>Asymmetric timing window</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <figure markdown="span">
+                    <img src = "https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/note_hold.png">
+                        <figcaption>Hold Note</figcaption>
+                </figure>
+            </td>
+            <td>
+                <ul>
+                    <li>Generally used to indicate an extended sound, but can also be mixed with other note types for more technical sections regardless of what the music is (this is typically done in EXP or INF only)</li>
+                    <li>Can be used to help break up a syncopated section</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>Compared to other games, has a somewhat generous release window (250ms)</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <figure markdown="span">
+                    <img src = "https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/note_chain.png">
+                        <figcaption>Chain Note</figcaption>
+                </figure>
+            </td>
+            <td>
+                <ul>
+                    <li>Can be used for dense sections i.e. 16th notes at 300 bpm</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>While having a guaranteed window if inputted, due to the slightly smaller overall input window (see Note Judgment below), this can be harder to hit if replacing Touch notes for the same pattern</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <figure markdown="span">
+                    <img src = "https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/note_r.png">
+                        <figcaption>R Note</figcaption>
+                </figure>
+            </td>
+            <td>
+                <ul>
+                    <li>Can be used to place greater emphasis on a specific sound</li>
+                    <li>Amount of usage can be preference, but consider comments to the right</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>Available for all above note types</li>
+                    <li>Plays a louder hit sound than other notes</li>
+                    <li>Worth 2x the score of a regular note</li>
+                    <li>The more R notes in a chart the lower the value of the non-R notes</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <figure markdown="span">
+                    <img src = "https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/note_bonus.png">
+                        <figcaption>Bonus Note</figcaption>
+                </figure>
+            </td>
+            <td>
+                <ul>
+                    <li>Can be used to place emphasis on a specific sound</li>
+                    <li>Due to the Touch note Bonus sound being distinctly different (less percussion) from a normal Touch note, can be used to represent a variance in sound in a given song</li>
+                    <li>Can be used more liberally without affecting scoring
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>Available only for Touch and Slide (Left or Right) note types</li>
+                    <li>Plays a different hitsound compared to regular notes</li>
+                    <li>Bonus Touch note hitsound plays a more distinctly different hitsound in game compared to Bonus slide notes</li>
+                    <li>No effect on scoring, grants more life for the clear bar instead</li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="note-judgement">Note Judgement</h3>
+<p>WACCA’s timing system functions in a similar way to Chunithm; if two or more notes are within close proximity to each other, their judgment windows get cut off.</p>
+<p>This means that notes in a high enough density will not have any windows other than marvelous, and can be freely hit by sliding on the touch panels, without the risk of losing accuracy.</p>
+<p>You can enable an overlay in <code>Settings -&gt; Rendering</code> to show these judgement windows in order to check if the windows are cut off.</p>
+<p>It's important to note that if timing windows get cut off from overlaps in a pattern like a trill, the game will only register Marvelous or Miss judgements, which can kill FCs and be very annoying to play.  Use the overlap overlay to ensure that your patterns do not overlap unless you intend for it to be slid.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Correct</th>
+<th style="text-align: center;">Incorrect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img 250hw:250hw="250hw:250hw" alt="A stream with timing windows that will not get cut off" src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/overlap_good.png" title="A stream with timing windows that will not get cut off" /></td>
+<td style="text-align: center;"><img 250hw:250hw="250hw:250hw" alt="A stream with timing windows that get cut off" src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/overlap_bad.png" title="A stream with timing windows that get cut off" /></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Note Type</th>
+<th style="text-align: center;">Good Timing Window in frames (Early/Late)</th>
+<th style="text-align: center;">Great Timing Window in frames (Early/Late)</th>
+<th style="text-align: center;">Marvelous Timing Window in frames (Early/Late)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Touch</td>
+<td style="text-align: center;">6/6</td>
+<td style="text-align: center;">5/5</td>
+<td style="text-align: center;">3/3</td>
+</tr>
+<tr>
+<td style="text-align: center;">Snap (Red)</td>
+<td style="text-align: center;">10/-</td>
+<td style="text-align: center;">8/10</td>
+<td style="text-align: center;">5/7</td>
+</tr>
+<tr>
+<td style="text-align: center;">Snap (Blue)</td>
+<td style="text-align: center;">-/10</td>
+<td style="text-align: center;">10/8</td>
+<td style="text-align: center;">7/5</td>
+</tr>
+<tr>
+<td style="text-align: center;">Slide (Orange)</td>
+<td style="text-align: center;">10/-</td>
+<td style="text-align: center;">8/10</td>
+<td style="text-align: center;">5/5</td>
+</tr>
+<tr>
+<td style="text-align: center;">Slide (Green)</td>
+<td style="text-align: center;">10/-</td>
+<td style="text-align: center;">8/10</td>
+<td style="text-align: center;">5/5</td>
+</tr>
+<tr>
+<td style="text-align: center;">Hold</td>
+<td style="text-align: center;">6/6</td>
+<td style="text-align: center;">5/5</td>
+<td style="text-align: center;">3/3</td>
+</tr>
+<tr>
+<td style="text-align: center;">Hold End</td>
+<td style="text-align: center;">if released for &gt;250ms then re-held</td>
+<td style="text-align: center;">-/-</td>
+<td style="text-align: center;">7/7</td>
+</tr>
+<tr>
+<td style="text-align: center;">Chain</td>
+<td style="text-align: center;">-/-</td>
+<td style="text-align: center;">-/-</td>
+<td style="text-align: center;">4/4</td>
+</tr>
+</tbody>
+</table>
+<h4 id="avenue-ing">Avenue-ing</h4>
+<p>Due to the way the game cuts off hitboxes, a hold end will cut off the early window of any notes on said hold end. </p>
+<p>Charts like Avenue (hence the name) use this trick to have notes on top of holds without risk of having it be triggered early. </p>
+<p>It's recommended to do this unless you specifically want to keep the early window as a challenge.</p>
+<hr />
+<h2 id="patterns">Patterns</h2>
+<h3 id="terminology">Terminology</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Term</th>
+<th style="text-align: center;">Description</th>
+<th style="text-align: center;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Trill / Drill</td>
+<td style="text-align: center;">Long 16th note run that follows a continuous path</td>
+<td style="text-align: center;"><img alt="Odin [Expert 13] ｜ Measure 38" src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/drill.png" title="Odin [Expert 13] ｜ Measure 38" /></td>
+</tr>
+<tr>
+<td style="text-align: center;">Anchor</td>
+<td style="text-align: center;">Patterns where one hand remains (is “anchored”) in place while the other hand executes patterns on the rest of the ring</td>
+<td style="text-align: center;"><img alt="EPHMR [Expert 13] ｜ Measure 33" src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/anchor.png" title="EPHMR [Expert 13] ｜ Measure 33" /></td>
+</tr>
+<tr>
+<td style="text-align: center;">Jumps</td>
+<td style="text-align: center;">A pattern forcing quick jumps from one side of the ring to another.</td>
+<td style="text-align: center;"><img alt="回レ！雪月花 / Maware! Setsugetsuka [Inferno 13+] ｜ Measure 6" src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/jumps.png" title="回レ！雪月花 / Maware! Setsugetsuka [Inferno 13+] ｜ Measure 6" /></td>
+</tr>
+<tr>
+<td style="text-align: center;">One-handed chord (aka bracket or just chord)</td>
+<td style="text-align: center;">Two notes meant to be hit with one hand</td>
+<td style="text-align: center;"><img alt="Ready Go [Expert 12] ｜ Measure 14" src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/1hc.png" title="Ready Go [Expert 12] ｜ Measure 14" /></td>
+</tr>
+<tr>
+<td style="text-align: center;">Two-handed chord (aka “Double”)</td>
+<td style="text-align: center;">Two notes meant to be hit with both hands/one hand each.</td>
+<td style="text-align: center;"><img alt="Dimension Hacker [Inferno 14] ｜ Measure 17" src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/2hc.png" title="Dimension Hacker [Inferno 14] ｜ Measure 17" /></td>
+</tr>
+<tr>
+<td style="text-align: center;">Cross hands / Cross over</td>
+<td style="text-align: center;">Patterns which require the player to cross one arm over/under another arm</td>
+<td style="text-align: center;"><img alt="Purple Skies [Expert 12] ｜ Measure 27" src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/crossover.png" title="Purple Skies [Expert 12] ｜ Measure 27" /></td>
+</tr>
+<tr>
+<td style="text-align: center;">Tap Slides a.k.a. Fake Slides</td>
+<td style="text-align: center;">Consecutive tap notes that expect the player to slide the note rather than tap them. This can either be sliding/scrubbing in a static position or following the position of consecutive notes. This works due to how judgment windows for notes work (see: <a href="https://siamesederp.github.io/MercuryMapper-Tutorial/Charting/#note-judgement">Note Judgement</a>). Compared to a similar slide using only chain notes, this pattern requires the player to be moving the entire way through the pattern to register each note. This is mostly restricted to level 13+ and higher.</td>
+<td style="text-align: center;"><img alt="BPM=RT [Expert 13+] ｜ Measure 22" src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/tapslide.png" title="BPM=RT [Expert 13+] ｜ Measure 22" /><img alt="ソロモン・ナイト/ Solomon Night [Expert 13] ｜ Measure 78" src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/fakeslide.png" title="ソロモン・ナイト/ Solomon Night [Expert 13] ｜ Measure 78" /></td>
+</tr>
+<tr>
+<td style="text-align: center;">Multi-swipe snap patterns</td>
+<td style="text-align: center;">Swipe and snap patterns that appear on the same Beat</td>
+<td style="text-align: center;"><img alt="インドア系ならトラックメイカー/Trackmaker [Expert 12+] ｜ Measure 59" src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/trackmaker.png" title="インドア系ならトラックメイカー/Trackmaker [Expert 12+] ｜ Measure 59" /> ^(This swipe style is also called called Trackmaker)^<img alt="Gashatt [Expert 12] ｜ Measure 44" src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/multi_swipe.png" title="Gashatt [Expert 12] ｜ Measure 44" /></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="legal-patterns">Legal Patterns</h3>
+<p>Keep in mind that Wacca is not an individual finger game, a common mistake people make when starting out is charting like the game is chunithm or a button game (patterns that use hand + thumb are ok)</p>
+<ul>
+<li>By raw sensor count, Wacca has 15 times the number of sensors as Chunithm, and 3.75 times if only considering CCW/CW directions</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Legal, but hard, patterns found in certain charts in the game (eg. Lethal Weapon, Poseidon, Cloud IX, MNK Inf) can be charted into a Wacca Plus chart, but strongly consider the playability and fun of the chart when charting.</p>
+</div>
+<p>One-hand chords compared to Chunithm or other touch games can be hard to hit, so try using them sparingly. </p>
+<p>Touch note slides are generally bound to high difficulties (13+ or above)</p>
+<p>In general, overlapping notes are not great from a readability perspective, however there are two exceptions:</p>
+<ul>
+<li>Overlapping hold notes and any notes on top of hold notes</li>
+<li>
+<p>Chain notes</p>
+<ul>
+<li>This is basically exclusive to 14s as a means of making swipe/snap patterns stricter (similar to chords but more lenient):</li>
+</ul>
+<p><img alt="Ouvertüre [Inferno 14] ｜ Measure 103" src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/chain_strict_1.png" title="Ouvertüre [Inferno 14] ｜ Measure 103" width="49%" /> <img alt="Super Emulator [Expert 14] ｜ Measure 46" src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/chain_strict_2.png" title="Super Emulator [Expert 14] ｜ Measure 46" width="49%" /></p>
+<ul>
+<li>However, arguably not necessary depending on the pattern</li>
+</ul>
+<p><img alt="Invisible Frenzy (Camellia's &quot;593: Insanely Fluctuated&quot; Remix) [Expert 14] ｜ Measure 114" src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/chain_strict_3.png" title="Invisible Frenzy (Camellia's &quot;593: Insanely Fluctuated&quot; Remix) [Expert 14] ｜ Measure 114" width="32.5%" /> <img alt="EPHMR [Inferno 14] ｜ Measure 92" src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/chain_strict_4.png" title="EPHMR [Inferno 14] ｜ Measure 92" width="32.5%" /> <img alt="DUAL BREAKER XX [Expert 13+] ｜ Measure 80" src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/chain_strict_5.png" title="DUAL BREAKER XX [Expert 13+] ｜ Measure 80" width="32.5%" /></p>
+</li>
+</ul>
+<p>You can find all official charts at <a href="https://mp.yello.ooo/">mp.yello.ooo</a> if you want to study them, it doesn't come with audio though.</p>
+<hr />
+<h3 id="input-guidance">Input Guidance</h3>
+<p>When placing swipes in the middle of holds, consider how the player’s hand should be moving and pattern to avoid causing early inputs
+- This includes using hold ends to prevent early input<br />
+- Can be done by adding hold start right after hold end or start multiple hold notes and and one hold note at each swipe/snap</p>
+<p>When using a swipe to transition to a new pattern, consider the likelihood of the player swiping into the notes on accident</p>
+<p>When ending a pattern with a swipe, try to keep at least a beat of distance between it and the start of the next pattern
+- This is a very malleable guideline as it is possible to swipe then have a touch note within an eighth note away, but the guideline above generally helps</p>
+<div class="admonition info">
+<p class="admonition-title">If a swipe or snap is on top of a hold end, consider making it larger than the hold end to allow the player to read it easier</p>
+<p>For swipes (CCW or CW movement), when increasing size, it tends to help if the side where you want the player to swipe protrudes out</p>
+<p><img alt="A hold leading into an orange silde" src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/hold_into_slide.png" title="A hold leading into an orange silde" width="50%" /></p>
+<p>For snaps, just making them two units larger symmetrically will help them pop out more</p>
+<p><img alt="A hold leading into a red snap" src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/hold_into_snap.png" title="A hold leading into a red snap" width="50%" /></p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Avoid chain note slides right before starting a touch note section.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Incorrect</th>
+<th style="text-align: center;">Correct</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img alt="Conflict [Expert 13] ｜ Measure 9" src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/chain_slide_bad.png" title="Conflict [Expert 13] ｜ Measure 9" /></td>
+<td style="text-align: center;"><img alt="XODUS [Expert 14] ｜ Measure 9: Chains to the side of tap notes section" src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/chain_slide_good.png" title="XODUS [Expert 14] ｜ Measure 9: Chains to the side of tap notes section" /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr />
+<h3 id="spins">Spins</h3>
+<p>The speed at which spins (i.e. amount of units moved per beat) is generally bpm-based, but at 200 BPM for example, a hold note or chain note spin that completes one rotation in one 4/4 time measure is generally a decent speed for an Expert.</p>
+<p>Some interesting notes about doing spins:</p>
+<ul>
+<li>Having a hold move at 5 units per 12th note will go around the circle one time exactly.</li>
+<li>A hold moving at 4 units per 16th note will go around the circle one time + 4 units.</li>
+<li>In general, having the number of units a spin or hold movement moves be a multiple of the size of the note can help with patterning (i.e. having a note size 15 move 5 or 3 units at a time).</li>
+</ul>
+<div class="admonition danger">
+<p class="admonition-title">For wider spins please make the notes bigger, however also keep in mind how cheesable it becomes (or play into it)</p>
+</div>
+<hr />
+<h2 id="decoratives">Decoratives</h2>
+<h3 id="masks">Masks</h3>
+<p>Use masks to direct the player on where the next patterns are going to be. Notes very rarely appear where there is no mask, so masks should be in place before a note reaches the playfield.</p>
+<div class="admonition info">
+<p class="admonition-title">Size 1 CW/CCW or Size 2 Center masks will appear instantly. Use them if you want the mask to appear without rotating into position.</p>
+</div>
+<hr />
+<h3 id="hi-speed-changes">Hi-Speed Changes</h3>
+<p>Avoid jump scare speed ups outside of Uppers (&gt;=13) / Inferno charts. Consider the sight readability of charts when designing the gameplay around hi-speed changes.</p>
+<p>Be mindful of how slow downs and speed ups are transitioned into. Accelerate and decelerate hi-speed as much as possible to give the player a chance to react.</p>
+<div class="admonition danger">
+<p class="admonition-title">Stops (Hi-speed &lt; 0.01) are notorious for causing the game to act funny or even freeze the game. Be mindful of using them and test the chart extensively.</p>
+</div>
+<p>Other gimmicks like the built in reverse are complicated systems usually reserved for specific charts in the game (like <code>You are the Miserable 「Lanota」</code> or <code>Stasis 「Lanota」</code>). They’re very finicky and can easily break a chart if not used correctly. The same goes for the built in Stop system, it is recommended to use Hi-speed values for this purpose instead.</p>
+<hr />
+<h3 id="chains-on-hold-notes">Chains on Hold Notes</h3>
+<p>If you have a moving Hold Note with Chains, keep their size equal or greater than the size of the Hold Note.</p>
+<hr />
+<h3 id="letters-and-other-hold-art">Letters and Other Hold Art</h3>
+<p>Use examples found in official charts to ensure Hold art doesn’t cause dropped inputs. Some charts that have Hold art are: <a href="https://youtu.be/rD7CjAep_7o?t=88">The Light</a> (Expert 12), <a href="https://youtu.be/avM2UX0guSE?t=74">Brain Power</a> (Expert 13), <a href="https://youtu.be/_TF3QV-Amks?t=85">We are the Massive New Krew</a> (Expert 13)</p>
+<p><img alt="The Light [Expert 12] ｜ Measure 56" src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/hold_art_w_ai.png" title="The Light [Expert 12] ｜ Measure 56" width="49%" /> <img alt="Brain Power [Expert 13] ｜ Measure 49" src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/hold_art_b_p.png" title="Brain Power [Expert 13] ｜ Measure 49" width="49%" /> <img alt="We Are The Massive New Krew [Expert 13] ｜ Measure 26" src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/hold_art_m_n_k.png" title="We Are The Massive New Krew [Expert 13] ｜ Measure 26" width="49%" /><img alt="私はNo 1！[Expert 12] ｜ Measure 21" src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/hold_art_anchor.png" title="私はNo 1！[Expert 12] ｜ Measure 21" width="49%" /></p>
+<hr />
+<h2 id="normal-charting">Normal Charting</h2>
+<p><strong>Normal Characteristics: easy to read, easy to execute</strong></p>
+<p>Normal charts should be charted &amp; expected to be played at default scroll speed (1.5). It is also recommended to test Normal charts with another handicap (eg. gloveless, one handed, playing with back of hand or fist) to simulate how a person new to Wacca would play.</p>
+<div class="admonition warning">
+<p class="admonition-title">Minimize or zero usage of the top half.</p>
+<p>Lower level players have not yet developed the muscle memory of playing top side apart from spins. If you are moving around the circle, you can go through the top, but don’t stay there long and always lead into &amp; out of it.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Most beginner players also look directly at the judgement line. Not the center.</p>
+<p>There's a good chance they literally won't see a note if it approaches from above.</p>
+</div>
+<p>Trend towards using larger note sizes (12-15).</p>
+<p>Utilize holds for filler and the hold ends as a “note” to fill in blank space as they do have a hitsound to them.</p>
+<p>Expect players to treat Chains as Taps (people skip the tutorial lol). Be aware that Chains have a smaller overall hit window (±12 frames) than Taps (±14 frames).</p>
+<p>Up / down snaps are rare in Normal charts below 6. Avoid using them and stick to CW/CCW swipes.</p>
+<p>Mask effects at this level should be very minimal as they can be very distracting for newer players</p>
+<p>Refer to <a href="https://youtube.com/playlist?list=PLGZO-9nKrOGMj2W9A1jbTFZ6JRyKHTqyx">curtain call normals</a> and <a href="https://www.youtube.com/playlist?list=PLkt3uTWW5wfvvAn0Uwk7geTgpRr20k-zW">this playlist</a> to get a good grasp on how Normal charts should flow.</p>
+<hr />
+<h2 id="hard-charting">Hard Charting</h2>
+<p><strong>Hard Characteristics: easy to read, trickier than normal to execute</strong></p>
+<p>Low tech, lack of trills (16th note patterns)</p>
+<p>Several breaks between patterns</p>
+<p>Long hold notes are good filler, but can get away with simple, big movements</p>
+<p>Consider putting effort into making lowers as fun to play as experts. Good lowers on custom songs helps bring more people into the game.</p>
+<p>If you want dense swipe (forward/backward) patterns - please reference DJ TURN 10</p>
+<p>There’s kinda a split in Hard charts - the single digits are just mostly more advanced Normals.  But 9+ to 11+ can start to throw much more complex ideas in.  Especially 10+ - 11+. </p>
+<p>While base game Hards do not use high-speed changes at all, if you do decide to use them then the chart is a 10 at minimum, and be very cautious while in use. For instance, don’t expect the player to hit more than 1 note (or a chord) with a slowdown, and that note should be the only thing visible.</p>
+<p><a href="https://youtube.com/playlist?list=PLrLB1VP-BXs4ohrcRyCksn8hFyeUr77Gg">playlist of base game hards</a>
+<a href="https://youtube.com/playlist?list=PLGZO-9nKrOGMejsBGgVemktMIJ96zsK3E">Hards 6+ to 8+</a>
+<a href="https://youtube.com/playlist?list=PLGZO-9nKrOGMLAaPscf_lWovCH2jfuiim">Hards 9 to 11+</a></p>
+<hr />
+<h2 id="expert-charting">Expert Charting</h2>
+<p><strong>Expert Characteristics: may require some studying, moderate difficulty to execute</strong></p>
+<p>Common tech that is seen in Experts:</p>
+<ul>
+<li>Triplets</li>
+<li>Trill runs</li>
+<li>One handed chords</li>
+<li>Cross handing</li>
+<li>Distinct hand patterns (eg. top hand holds, bottom hand executes taps)</li>
+<li>Scratching</li>
+<li>Tap slides</li>
+<li>Multi swipe / snap patterns (eg. Trackmaker)</li>
+<li>Multi hold patterns, requiring use of thumbs or individual fingers</li>
+<li>Full ring notes</li>
+</ul>
+<p>(see <a href="https://siamesederp.github.io/MercuryMapper-Tutorial/Charting/#terminology">Terminology</a> for definitions) </p>
+<p>Difficulty of Expert charts tend to correlate to the number of tech patterns used in a chart. Lower level Experts employ a few patterns to make them distinct. Upper level Experts will expect the player to utilize more tech skill sets.</p>
+<p>A common theme in Experts are ones where one hand does a simple pattern and the other hand follows a more complex movement that requires more focus i.e. tracking notes that move in a wider range. </p>
+<hr />
+<h2 id="inferno-charting">Inferno Charting</h2>
+<p><strong>Inferno: hard to read, hard to execute</strong></p>
+<ul>
+<li>Inferno is called inferno because it really works out your upper arms</li>
+<li>For some reason inferno charts occasionally use alternate song cuts</li>
+<li>Inferno charts have a LOT more gimmicks than experts (Both visual and patterning)</li>
+<li>Lower level Infernos can be a thing!  Usually if it’s a chart that is:<ul>
+<li>Being VERY gimmicky (but not challenging) [ex - something like Chuni’s World’s End chart for Dan-Dan Hayaku Naru metronome]</li>
+<li>imitating an unconventional chart from another game</li>
+<li>Following a dance routine </li>
+</ul>
+</li>
+<li>When putting hold notes on top of larger hold notes (Think full 360 holds), it helps with visibility to put a tap note on the start of each smaller hold. See charts like Mobius and Overture INF. You should honestly also do this for Experts as well</li>
+</ul>
+<hr />
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 29, 2025 09:30:10">April 29, 2025</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.tooltips"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1459 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A tutorial for MercuryMapper and WACCA charting">
+      
+      
+      
+        <link rel="canonical" href="https://siamesederp.github.io/MercuryMapper-Tutorial/Editor/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../Charting/">
+      
+      
+      <link rel="icon" href="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/MercuryMapperIcon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Editor - MercuryMapper Tutorial</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M64%2032C28.7%2032%200%2060.7%200%2096v320c0%2035.3%2028.7%2064%2064%2064h224V368c0-26.5%2021.5-48%2048-48h112V96c0-35.3-28.7-64-64-64zm384%20320H336c-8.8%200-16%207.2-16%2016v112l32-32%2064-64z%22/%3E%3C/svg%3E');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M256%20512a256%20256%200%201%200%200-512%20256%20256%200%201%200%200%20512m-40-176h24v-64h-24c-13.3%200-24-10.7-24-24s10.7-24%2024-24h48c13.3%200%2024%2010.7%2024%2024v88h8c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-80c-13.3%200-24-10.7-24-24s10.7-24%2024-24m40-208a32%2032%200%201%201%200%2064%2032%2032%200%201%201%200-64%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M480%2032c0-12.9-7.8-24.6-19.8-29.6S434.5.2%20425.3%209.3L381.7%2053c-48%2048-113.1%2075-181%2075H64c-35.3%200-64%2028.7-64%2064v96c0%2035.3%2028.7%2064%2064%2064v128c0%2017.7%2014.3%2032%2032%2032h64c17.7%200%2032-14.3%2032-32V352h8.7c67.9%200%20133%2027%20181%2075l43.6%2043.6c9.2%209.2%2022.9%2011.9%2034.9%206.9s19.8-16.6%2019.8-29.6V300.3c18.6-8.8%2032-32.5%2032-60.4s-13.4-51.6-32-60.4zm-64%2076.7v262.6C357.2%20317.8%20280.5%20288%20200.7%20288H192v-96h8.7c79.8%200%20156.5-29.8%20215.3-83.3%22/%3E%3C/svg%3E');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M438.6%20105.4c12.5%2012.5%2012.5%2032.8%200%2045.3l-256%20256c-12.5%2012.5-32.8%2012.5-45.3%200l-128-128c-12.5-12.5-12.5-32.8%200-45.3s32.8-12.5%2045.3%200L160%20338.7l233.4-233.3c12.5-12.5%2032.8-12.5%2045.3%200z%22/%3E%3C/svg%3E');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M256%20512a256%20256%200%201%200%200-512%20256%20256%200%201%200%200%20512m-86.2-346.7c7.9-22.3%2029.1-37.3%2052.8-37.3h58.3c34.9%200%2063.1%2028.3%2063.1%2063.1%200%2022.6-12.1%2043.5-31.7%2054.8L280%20264.4c-.2%2013-10.9%2023.6-24%2023.6-13.3%200-24-10.7-24-24v-13.5c0-8.6%204.6-16.5%2012.1-20.8l44.3-25.4c4.7-2.7%207.6-7.7%207.6-13.1%200-8.4-6.8-15.1-15.1-15.1h-58.3c-3.4%200-6.4%202.1-7.5%205.3l-.4%201.2c-4.4%2012.5-18.2%2019-30.6%2014.6s-19-18.2-14.6-30.6l.4-1.2zM224%20352a32%2032%200%201%201%2064%200%2032%2032%200%201%201-64%200%22/%3E%3C/svg%3E');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M256%2032c14.2%200%2027.3%207.5%2034.5%2019.8l216%20368c7.3%2012.4%207.3%2027.7.2%2040.1S486.3%20480%20472%20480H40c-14.3%200-27.6-7.7-34.7-20.1s-7-27.8.2-40.1l216-368C228.7%2039.5%20241.8%2032%20256%2032m0%20128c-13.3%200-24%2010.7-24%2024v112c0%2013.3%2010.7%2024%2024%2024s24-10.7%2024-24V184c0-13.3-10.7-24-24-24m32%20224a32%2032%200%201%200-64%200%2032%2032%200%201%200%2064%200%22/%3E%3C/svg%3E');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M459.1%2052.4%20442.6%206.5c-1.9-3.9-6.1-6.5-10.5-6.5s-8.5%202.6-10.4%206.5l-16.5%2045.9-46%2016.8c-4.3%201.6-7.3%205.9-7.2%2010.4%200%204.5%203%208.7%207.2%2010.2l45.7%2016.8%2016.8%2045.8c1.5%204.4%205.8%207.5%2010.4%207.5s8.9-3.1%2010.4-7.5l16.5-45.8%2045.7-16.8c4.2-1.5%207.2-5.7%207.2-10.2%200-4.6-3-8.9-7.2-10.4zm-132.4%2053c-12.5-12.5-32.8-12.5-45.3%200l-2.9%202.9c-22-8-45.8-12.3-70.5-12.3C93.1%2096%200%20189.1%200%20304s93.1%20208%20208%20208%20208-93.1%20208-208c0-24.7-4.3-48.5-12.2-70.5l2.9-2.9c12.5-12.5%2012.5-32.8%200-45.3l-80-80zM200%20192c-57.4%200-104%2046.6-104%20104v8c0%208.8-7.2%2016-16%2016s-16-7.2-16-16v-8c0-75.1%2060.9-136%20136-136h8c8.8%200%2016%207.2%2016%2016s-7.2%2016-16%2016z%22/%3E%3C/svg%3E');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M256%20512a256%20256%200%201%200%200-512%20256%20256%200%201%200%200%20512m-81-337c9.4-9.4%2024.6-9.4%2033.9%200l47%2047%2047-47c9.4-9.4%2024.6-9.4%2033.9%200s9.4%2024.6%200%2033.9l-47%2047%2047%2047c9.4%209.4%209.4%2024.6%200%2033.9s-24.6%209.4-33.9%200l-47-47-47%2047c-9.4%209.4-24.6%209.4-33.9%200s-9.4-24.6%200-33.9l47-47-47-47c-9.4-9.4-9.4-24.6%200-33.9%22/%3E%3C/svg%3E');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20640%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M320%200c17.7%200%2032%2014.3%2032%2032v64h120c39.8%200%2072%2032.2%2072%2072v272c0%2039.8-32.2%2072-72%2072H168c-39.8%200-72-32.2-72-72V168c0-39.8%2032.2-72%2072-72h120V32c0-17.7%2014.3-32%2032-32M208%20384c-8.8%200-16%207.2-16%2016s7.2%2016%2016%2016h32c8.8%200%2016-7.2%2016-16s-7.2-16-16-16zm96%200c-8.8%200-16%207.2-16%2016s7.2%2016%2016%2016h32c8.8%200%2016-7.2%2016-16s-7.2-16-16-16zm96%200c-8.8%200-16%207.2-16%2016s7.2%2016%2016%2016h32c8.8%200%2016-7.2%2016-16s-7.2-16-16-16zM264%20256a40%2040%200%201%200-80%200%2040%2040%200%201%200%2080%200m152%2040a40%2040%200%201%200%200-80%2040%2040%200%201%200%200%2080M48%20224h16v192H48c-26.5%200-48-21.5-48-48v-96c0-26.5%2021.5-48%2048-48m544%200c26.5%200%2048%2021.5%2048%2048v96c0%2026.5-21.5%2048-48%2048h-16V224z%22/%3E%3C/svg%3E');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M288%200H128c-17.7%200-32%2014.3-32%2032s14.3%2032%2032%2032v132.8c0%2011.8-3.3%2023.5-9.5%2033.5L10.3%20406.2C3.6%20417.2%200%20429.7%200%20442.6%200%20480.9%2031.1%20512%2069.4%20512h309.2c38.3%200%2069.4-31.1%2069.4-69.4%200-12.8-3.6-25.4-10.3-36.4L329.5%20230.4c-6.2-10.1-9.5-21.7-9.5-33.5V64c17.7%200%2032-14.3%2032-32S337.7%200%20320%200zm-96%20196.8V64h64v132.8c0%2023.7%206.6%2046.9%2019%2067.1l34.5%2056.1h-171l34.5-56.1c12.4-20.2%2019-43.4%2019-67.1%22/%3E%3C/svg%3E');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M0%20216C0%20149.7%2053.7%2096%20120%2096h8c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032h-8c-30.9%200-56%2025.1-56%2056v8h64c35.3%200%2064%2028.7%2064%2064v64c0%2035.3-28.7%2064-64%2064H64c-35.3%200-64-28.7-64-64V216m256%200c0-66.3%2053.7-120%20120-120h8c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032h-8c-30.9%200-56%2025.1-56%2056v8h64c35.3%200%2064%2028.7%2064%2064v64c0%2035.3-28.7%2064-64%2064h-64c-35.3%200-64-28.7-64-64V216%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="MercuryMapper Tutorial" class="md-header__button md-logo" aria-label="MercuryMapper Tutorial" data-md-component="logo">
+      
+  <img src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/MercuryMapperIcon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MercuryMapper Tutorial
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Editor
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/siamesederp/MercuryMapper-Tutorial" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="MercuryMapper Tutorial" class="md-nav__button md-logo" aria-label="MercuryMapper Tutorial" data-md-component="logo">
+      
+  <img src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/MercuryMapperIcon.png" alt="logo">
+
+    </a>
+    MercuryMapper Tutorial
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/siamesederp/MercuryMapper-Tutorial" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Editor
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Editor
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing-the-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing the editor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing the editor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting up audio
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting up audio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#audacitytenacity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audacity/Tenacity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reaper" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reaper
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initial-chart-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial Chart Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hitsounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hitsounds
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keybinds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keybinds
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Interface
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="User Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#top" class="md-nav__link">
+    <span class="md-ellipsis">
+      Top
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#left" class="md-nav__link">
+    <span class="md-ellipsis">
+      Left
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#right" class="md-nav__link">
+    <span class="md-ellipsis">
+      Right
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bottom" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bottom
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#note-placement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Note Placement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Note Placement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#holds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Holds
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selecting-editing-deleting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selecting, Editing, Deleting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gimmicks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gimmicks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gimmicks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hi-speed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hi-Speed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reverse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reverse
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Charting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Charting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hold_Art/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hold Art
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing-the-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing the editor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing the editor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting up audio
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting up audio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#audacitytenacity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audacity/Tenacity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reaper" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reaper
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initial-chart-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial Chart Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hitsounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hitsounds
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keybinds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keybinds
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Interface
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="User Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#top" class="md-nav__link">
+    <span class="md-ellipsis">
+      Top
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#left" class="md-nav__link">
+    <span class="md-ellipsis">
+      Left
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#right" class="md-nav__link">
+    <span class="md-ellipsis">
+      Right
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bottom" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bottom
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#note-placement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Note Placement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Note Placement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#holds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Holds
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selecting-editing-deleting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selecting, Editing, Deleting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gimmicks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gimmicks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gimmicks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hi-speed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hi-Speed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reverse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reverse
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="_1"></h1>
+<h2 id="installing-the-editor">Installing the editor</h2>
+<h3 id="download">Download</h3>
+<details class="info">
+<summary><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="m0 93.7 183.6-25.3v177.4H0zm0 324.6 183.6 25.3V268.4H0zm203.8 28L448 480V268.4H203.8zm0-380.6v180.1H448V32z"/></svg></span> Windows/<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M220.8 123.3c1 .5 1.8 1.7 3 1.7 1.1 0 2.8-.4 2.9-1.5.2-1.4-1.9-2.3-3.2-2.9-1.7-.7-3.9-1-5.5-.1-.4.2-.8.7-.6 1.1.3 1.3 2.3 1.1 3.4 1.7m-21.9 1.7c1.2 0 2-1.2 3-1.7 1.1-.6 3.1-.4 3.5-1.6.2-.4-.2-.9-.6-1.1-1.6-.9-3.8-.6-5.5.1-1.3.6-3.4 1.5-3.2 2.9.1 1 1.8 1.5 2.8 1.4M420 403.8c-3.6-4-5.3-11.6-7.2-19.7-1.8-8.1-3.9-16.8-10.5-22.4-1.3-1.1-2.6-2.1-4-2.9-1.3-.8-2.7-1.5-4.1-2 9.2-27.3 5.6-54.5-3.7-79.1-11.4-30.1-31.3-56.4-46.5-74.4-17.1-21.5-33.7-41.9-33.4-72C311.1 85.4 315.7.1 234.8 0 132.4-.2 158 103.4 156.9 135.2c-1.7 23.4-6.4 41.8-22.5 64.7-18.9 22.5-45.5 58.8-58.1 96.7-6 17.9-8.8 36.1-6.2 53.3-6.5 5.8-11.4 14.7-16.6 20.2-4.2 4.3-10.3 5.9-17 8.3s-14 6-18.5 14.5c-2.1 3.9-2.8 8.1-2.8 12.4 0 3.9.6 7.9 1.2 11.8 1.2 8.1 2.5 15.7.8 20.8-5.2 14.4-5.9 24.4-2.2 31.7 3.8 7.3 11.4 10.5 20.1 12.3 17.3 3.6 40.8 2.7 59.3 12.5 19.8 10.4 39.9 14.1 55.9 10.4 11.6-2.6 21.1-9.6 25.9-20.2 12.5-.1 26.3-5.4 48.3-6.6 14.9-1.2 33.6 5.3 55.1 4.1.6 2.3 1.4 4.6 2.5 6.7v.1c8.3 16.7 23.8 24.3 40.3 23 16.6-1.3 34.1-11 48.3-27.9 13.6-16.4 36-23.2 50.9-32.2 7.4-4.5 13.4-10.1 13.9-18.3.4-8.2-4.4-17.3-15.5-29.7M223.7 87.3c9.8-22.2 34.2-21.8 44-.4 6.5 14.2 3.6 30.9-4.3 40.4-1.6-.8-5.9-2.6-12.6-4.9 1.1-1.2 3.1-2.7 3.9-4.6 4.8-11.8-.2-27-9.1-27.3-7.3-.5-13.9 10.8-11.8 23-4.1-2-9.4-3.5-13-4.4-1-6.9-.3-14.6 2.9-21.8M183 75.8c10.1 0 20.8 14.2 19.1 33.5-3.5 1-7.1 2.5-10.2 4.6 1.2-8.9-3.3-20.1-9.6-19.6-8.4.7-9.8 21.2-1.8 28.1 1 .8 1.9-.2-5.9 5.5-15.6-14.6-10.5-52.1 8.4-52.1m-13.6 60.7c6.2-4.6 13.6-10 14.1-10.5 4.7-4.4 13.5-14.2 27.9-14.2 7.1 0 15.6 2.3 25.9 8.9 6.3 4.1 11.3 4.4 22.6 9.3 8.4 3.5 13.7 9.7 10.5 18.2-2.6 7.1-11 14.4-22.7 18.1-11.1 3.6-19.8 16-38.2 14.9-3.9-.2-7-1-9.6-2.1-8-3.5-12.2-10.4-20-15-8.6-4.8-13.2-10.4-14.7-15.3q-2.1-7.35 4.2-12.3m3.3 334c-2.7 35.1-43.9 34.4-75.3 18-29.9-15.8-68.6-6.5-76.5-21.9-2.4-4.7-2.4-12.7 2.6-26.4v-.2c2.4-7.6.6-16-.6-23.9-1.2-7.8-1.8-15 .9-20 3.5-6.7 8.5-9.1 14.8-11.3 10.3-3.7 11.8-3.4 19.6-9.9 5.5-5.7 9.5-12.9 14.3-18 5.1-5.5 10-8.1 17.7-6.9 8.1 1.2 15.1 6.8 21.9 16l19.6 35.6c9.5 19.9 43.1 48.4 41 68.9m-1.4-25.9c-4.1-6.6-9.6-13.6-14.4-19.6 7.1 0 14.2-2.2 16.7-8.9 2.3-6.2 0-14.9-7.4-24.9-13.5-18.2-38.3-32.5-38.3-32.5-13.5-8.4-21.1-18.7-24.6-29.9s-3-23.3-.3-35.2c5.2-22.9 18.6-45.2 27.2-59.2 2.3-1.7.8 3.2-8.7 20.8-8.5 16.1-24.4 53.3-2.6 82.4.6-20.7 5.5-41.8 13.8-61.5 12-27.4 37.3-74.9 39.3-112.7 1.1.8 4.6 3.2 6.2 4.1 4.6 2.7 8.1 6.7 12.6 10.3 12.4 10 28.5 9.2 42.4 1.2 6.2-3.5 11.2-7.5 15.9-9 9.9-3.1 17.8-8.6 22.3-15 7.7 30.4 25.7 74.3 37.2 95.7 6.1 11.4 18.3 35.5 23.6 64.6 3.3-.1 7 .4 10.9 1.4 13.8-35.7-11.7-74.2-23.3-84.9-4.7-4.6-4.9-6.6-2.6-6.5 12.6 11.2 29.2 33.7 35.2 59 2.8 11.6 3.3 23.7.4 35.7 16.4 6.8 35.9 17.9 30.7 34.8-2.2-.1-3.2 0-4.2 0 3.2-10.1-3.9-17.6-22.8-26.1-19.6-8.6-36-8.6-38.3 12.5-12.1 4.2-18.3 14.7-21.4 27.3-2.8 11.2-3.6 24.7-4.4 39.9-.5 7.7-3.6 18-6.8 29-32.1 22.9-76.7 32.9-114.3 7.2m257.4-11.5c-.9 16.8-41.2 19.9-63.2 46.5-13.2 15.7-29.4 24.4-43.6 25.5s-26.5-4.8-33.7-19.3c-4.7-11.1-2.4-23.1 1.1-36.3 3.7-14.2 9.2-28.8 9.9-40.6.8-15.2 1.7-28.5 4.2-38.7 2.6-10.3 6.6-17.2 13.7-21.1.3-.2.7-.3 1-.5.8 13.2 7.3 26.6 18.8 29.5 12.6 3.3 30.7-7.5 38.4-16.3 9-.3 15.7-.9 22.6 5.1 9.9 8.5 7.1 30.3 17.1 41.6 10.6 11.6 14 19.5 13.7 24.6M173.3 148.7c2 1.9 4.7 4.5 8 7.1 6.6 5.2 15.8 10.6 27.3 10.6 11.6 0 22.5-5.9 31.8-10.8 4.9-2.6 10.9-7 14.8-10.4s5.9-6.3 3.1-6.6-2.6 2.6-6 5.1c-4.4 3.2-9.7 7.4-13.9 9.8-7.4 4.2-19.5 10.2-29.9 10.2s-18.7-4.8-24.9-9.7c-3.1-2.5-5.7-5-7.7-6.9-1.5-1.4-1.9-4.6-4.3-4.9-1.4-.1-1.8 3.7 1.7 6.5"/></svg></span>Linux</summary>
+<ol>
+<li>
+<p>You can download the editor from these URLs:</p>
+<p><a href="https://github.com/Yasu3D/MercuryMapper/releases/latest/download/MercuryMapper-Win-Portable.zip"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="m0 93.7 183.6-25.3v177.4H0zm0 324.6 183.6 25.3V268.4H0zm203.8 28L448 480V268.4H203.8zm0-380.6v180.1H448V32z"/></svg></span> Windows</a></p>
+<p><a href="https://github.com/Yasu3D/MercuryMapper/releases/latest/download/MercuryMapper-Linux-x64.zip"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M220.8 123.3c1 .5 1.8 1.7 3 1.7 1.1 0 2.8-.4 2.9-1.5.2-1.4-1.9-2.3-3.2-2.9-1.7-.7-3.9-1-5.5-.1-.4.2-.8.7-.6 1.1.3 1.3 2.3 1.1 3.4 1.7m-21.9 1.7c1.2 0 2-1.2 3-1.7 1.1-.6 3.1-.4 3.5-1.6.2-.4-.2-.9-.6-1.1-1.6-.9-3.8-.6-5.5.1-1.3.6-3.4 1.5-3.2 2.9.1 1 1.8 1.5 2.8 1.4M420 403.8c-3.6-4-5.3-11.6-7.2-19.7-1.8-8.1-3.9-16.8-10.5-22.4-1.3-1.1-2.6-2.1-4-2.9-1.3-.8-2.7-1.5-4.1-2 9.2-27.3 5.6-54.5-3.7-79.1-11.4-30.1-31.3-56.4-46.5-74.4-17.1-21.5-33.7-41.9-33.4-72C311.1 85.4 315.7.1 234.8 0 132.4-.2 158 103.4 156.9 135.2c-1.7 23.4-6.4 41.8-22.5 64.7-18.9 22.5-45.5 58.8-58.1 96.7-6 17.9-8.8 36.1-6.2 53.3-6.5 5.8-11.4 14.7-16.6 20.2-4.2 4.3-10.3 5.9-17 8.3s-14 6-18.5 14.5c-2.1 3.9-2.8 8.1-2.8 12.4 0 3.9.6 7.9 1.2 11.8 1.2 8.1 2.5 15.7.8 20.8-5.2 14.4-5.9 24.4-2.2 31.7 3.8 7.3 11.4 10.5 20.1 12.3 17.3 3.6 40.8 2.7 59.3 12.5 19.8 10.4 39.9 14.1 55.9 10.4 11.6-2.6 21.1-9.6 25.9-20.2 12.5-.1 26.3-5.4 48.3-6.6 14.9-1.2 33.6 5.3 55.1 4.1.6 2.3 1.4 4.6 2.5 6.7v.1c8.3 16.7 23.8 24.3 40.3 23 16.6-1.3 34.1-11 48.3-27.9 13.6-16.4 36-23.2 50.9-32.2 7.4-4.5 13.4-10.1 13.9-18.3.4-8.2-4.4-17.3-15.5-29.7M223.7 87.3c9.8-22.2 34.2-21.8 44-.4 6.5 14.2 3.6 30.9-4.3 40.4-1.6-.8-5.9-2.6-12.6-4.9 1.1-1.2 3.1-2.7 3.9-4.6 4.8-11.8-.2-27-9.1-27.3-7.3-.5-13.9 10.8-11.8 23-4.1-2-9.4-3.5-13-4.4-1-6.9-.3-14.6 2.9-21.8M183 75.8c10.1 0 20.8 14.2 19.1 33.5-3.5 1-7.1 2.5-10.2 4.6 1.2-8.9-3.3-20.1-9.6-19.6-8.4.7-9.8 21.2-1.8 28.1 1 .8 1.9-.2-5.9 5.5-15.6-14.6-10.5-52.1 8.4-52.1m-13.6 60.7c6.2-4.6 13.6-10 14.1-10.5 4.7-4.4 13.5-14.2 27.9-14.2 7.1 0 15.6 2.3 25.9 8.9 6.3 4.1 11.3 4.4 22.6 9.3 8.4 3.5 13.7 9.7 10.5 18.2-2.6 7.1-11 14.4-22.7 18.1-11.1 3.6-19.8 16-38.2 14.9-3.9-.2-7-1-9.6-2.1-8-3.5-12.2-10.4-20-15-8.6-4.8-13.2-10.4-14.7-15.3q-2.1-7.35 4.2-12.3m3.3 334c-2.7 35.1-43.9 34.4-75.3 18-29.9-15.8-68.6-6.5-76.5-21.9-2.4-4.7-2.4-12.7 2.6-26.4v-.2c2.4-7.6.6-16-.6-23.9-1.2-7.8-1.8-15 .9-20 3.5-6.7 8.5-9.1 14.8-11.3 10.3-3.7 11.8-3.4 19.6-9.9 5.5-5.7 9.5-12.9 14.3-18 5.1-5.5 10-8.1 17.7-6.9 8.1 1.2 15.1 6.8 21.9 16l19.6 35.6c9.5 19.9 43.1 48.4 41 68.9m-1.4-25.9c-4.1-6.6-9.6-13.6-14.4-19.6 7.1 0 14.2-2.2 16.7-8.9 2.3-6.2 0-14.9-7.4-24.9-13.5-18.2-38.3-32.5-38.3-32.5-13.5-8.4-21.1-18.7-24.6-29.9s-3-23.3-.3-35.2c5.2-22.9 18.6-45.2 27.2-59.2 2.3-1.7.8 3.2-8.7 20.8-8.5 16.1-24.4 53.3-2.6 82.4.6-20.7 5.5-41.8 13.8-61.5 12-27.4 37.3-74.9 39.3-112.7 1.1.8 4.6 3.2 6.2 4.1 4.6 2.7 8.1 6.7 12.6 10.3 12.4 10 28.5 9.2 42.4 1.2 6.2-3.5 11.2-7.5 15.9-9 9.9-3.1 17.8-8.6 22.3-15 7.7 30.4 25.7 74.3 37.2 95.7 6.1 11.4 18.3 35.5 23.6 64.6 3.3-.1 7 .4 10.9 1.4 13.8-35.7-11.7-74.2-23.3-84.9-4.7-4.6-4.9-6.6-2.6-6.5 12.6 11.2 29.2 33.7 35.2 59 2.8 11.6 3.3 23.7.4 35.7 16.4 6.8 35.9 17.9 30.7 34.8-2.2-.1-3.2 0-4.2 0 3.2-10.1-3.9-17.6-22.8-26.1-19.6-8.6-36-8.6-38.3 12.5-12.1 4.2-18.3 14.7-21.4 27.3-2.8 11.2-3.6 24.7-4.4 39.9-.5 7.7-3.6 18-6.8 29-32.1 22.9-76.7 32.9-114.3 7.2m257.4-11.5c-.9 16.8-41.2 19.9-63.2 46.5-13.2 15.7-29.4 24.4-43.6 25.5s-26.5-4.8-33.7-19.3c-4.7-11.1-2.4-23.1 1.1-36.3 3.7-14.2 9.2-28.8 9.9-40.6.8-15.2 1.7-28.5 4.2-38.7 2.6-10.3 6.6-17.2 13.7-21.1.3-.2.7-.3 1-.5.8 13.2 7.3 26.6 18.8 29.5 12.6 3.3 30.7-7.5 38.4-16.3 9-.3 15.7-.9 22.6 5.1 9.9 8.5 7.1 30.3 17.1 41.6 10.6 11.6 14 19.5 13.7 24.6M173.3 148.7c2 1.9 4.7 4.5 8 7.1 6.6 5.2 15.8 10.6 27.3 10.6 11.6 0 22.5-5.9 31.8-10.8 4.9-2.6 10.9-7 14.8-10.4s5.9-6.3 3.1-6.6-2.6 2.6-6 5.1c-4.4 3.2-9.7 7.4-13.9 9.8-7.4 4.2-19.5 10.2-29.9 10.2s-18.7-4.8-24.9-9.7c-3.1-2.5-5.7-5-7.7-6.9-1.5-1.4-1.9-4.6-4.3-4.9-1.4-.1-1.8 3.7 1.7 6.5"/></svg></span> Linux (x64)</a></p>
+<p><a href="https://aur.archlinux.org/packages/mercury-mapper-bin"><span class="twemoji lg middle"><img src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/arch.png" alt="Arch Linux Logo"></span> AUR (Binary)</a></p>
+<p><a href="https://aur.archlinux.org/packages/mercury-mapper"><span class="twemoji lg middle"><img src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/arch.png" alt="Arch Linux Logo"></span> AUR (Source)</a></p>
+</li>
+<li>
+<p>Alternatively, you can download from github</p>
+</li>
+<li>Go to the <a href="https://github.com/Yasu3D/MercuryMapper">MercuryMapper GitHub repository</a>.</li>
+<li>In the <strong>Releases</strong> section, find the latest release (it’s usually at the top of the list).</li>
+<li>Under the latest release, find the assets section and download the version for your operating system.</li>
+</ol>
+</details>
+<details class="info">
+<summary><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9m-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3"/></svg></span> OS X</summary>
+<p>Due to the requirements to develop for mac, the mac version is seperately maintained by h3llo_wor1d. (No guarantees this works/doesn't break)</p>
+<p><div comment = "No releases on the github yet, remove this div when there's actually a build" style = "display:none">1. Go to the <a href="https://github.com/h3llo-wor1d/MercuryMapper-MacOS">MercuryMapper Mac Repository</a>
+2. In the <strong>Releases</strong> section, find the latest release (it’s usually at the top of the list).
+3. Under the latest release, find the assets section and download <code>MercuryMapper-Win-Portable.zip</code>
+4. Alternatively, you can download from one of these links: </div></p>
+<p><a href="https://github.com/h3llo-wor1d/mercury-mac/releases/download/v1/osx-arm64.zip"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9m-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3"/></svg></span> OS X (ARM64)</a></p>
+<p>Requires <a href="https://versionsof.net/core/8.0/8.0.12/">.NET 8.0.12</a></p>
+</details>
+<h3 id="install">Install</h3>
+<div class="admonition info">
+<p class="admonition-title">This is for Windows, but the core concepts can be transferred to other operating systems.</p>
+</div>
+<ol>
+<li>Once the download is complete, navigate to your download location.</li>
+<li>Right-click the <code>MercuryMapper-Win-Portable.zip</code> file and select <strong>Extract All</strong> or use a tool like <a href="https://7-zip.org/">7zip</a> to extract it.</li>
+<li>Navigate to the extracted folder.</li>
+<li>Locate and run <code>MercuryMapper.exe</code></li>
+</ol>
+<hr />
+<h2 id="setting-up-audio">Setting up audio</h2>
+<hr />
+<h4 id="audacitytenacity">Audacity/Tenacity</h4>
+<div class="admonition info">
+<p class="admonition-title">This guide will use audacity, but the core concepts can be transferred to other audio editors.</p>
+</div>
+<ol>
+<li>Open <a href="https://www.audacityteam.org/download/">Audacity</a> or <a href="https://tenacityaudio.org/">Tenacity</a> and import your song.</li>
+<li>Insert one or two measures of silence at the start of the audio, use one if you want the song to start immediately after the metronome.</li>
+<li>Ensure the song is synced so that the first beat lands at the start of a measure, you can use <code>Generate -&gt; BPM Labels</code> to check this.</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">BPM Labels is not a stock plugin</p>
+<p>If you don't have it, download it here: <a href="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/resource/bpm-labels.zip"><code>bpm-labels.ny</code></a></p>
+</div>
+<p>Example image, where the audio starts on measure 2 and the first played beat is on measure 4:
+<img alt="BPM_Label_Image" src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/BPM_Label.png" title="BPM_Label_Image" /></p>
+<ol>
+<li>Export the edited audio using <code>File -&gt; Export Audio</code>, It's recommend to export as WAV as it tends to work the best. </li>
+</ol>
+<h4 id="reaper">Reaper</h4>
+<ol>
+<li>Open <a href="https://www.reaper.fm/download.php">Reaper</a> </li>
+<li>If this is your first time running reaper, make sure Grid Lines are enabled: <img alt="Grid_Lines_Toggle" src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/Reaper_Grid.png" title="Grid_Lines_Toggle" /><br />
+  Then, go to <code>File -&gt; Project Settings</code>, change <code>Timebase for items/envelopes/markers</code> to Time, and click <code>Save as default project settings</code> <img alt="Default_Project_Settings" src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/Reaper_Defaults.png" title="Default_Project_Settings" /></li>
+<li>Drag and drop your audio, or use <code>Insert -&gt; Media File</code></li>
+<li>Set your song's BPM on the bottom right</li>
+<li>Hold shift+click to drag the track without grid snapping, and time the audio to the measure line.</li>
+<li>If you need to add measures, expand (click and drag) the left edge of your track until it snaps to a measure line, then click and drag the track to move it around.</li>
+</ol>
+<hr />
+<h2 id="basics">Basics</h2>
+<hr />
+<h3 id="initial-chart-setup">Initial Chart Setup</h3>
+<ol>
+<li>In the editor, select <code>File -&gt; New</code> to create a new chart.</li>
+<li>Set the BPM and Time Signature here, if you don't have them you can usually find them pretty easily or calculate them yourself.</li>
+<li>
+<p>In the right of the editor, open <code>Chart Info</code> and fill out all the information. </p>
+<p>3.1. See the <a href="https://siamesederp.github.io/MercuryMapper-Tutorial/Editor/#right">User Interface Section</a> if any fields are confusing </p>
+</li>
+</ol>
+<h3 id="hitsounds">Hitsounds</h3>
+<p>Download the hitsounds zip here: <a href="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/resource/hitsounds.zip"><code>hitsounds.zip</code></a>.</p>
+<p>Right-click the <code>hitsounds.zip</code> file and select <strong>Extract All</strong> or use a tool like <a href="https://7-zip.org/">7zip</a> to extract it.</p>
+<p>Open the settings, then select Audio, from here you can change hitsound volume and assign the audio files to each hitsound type.</p>
+<h3 id="keybinds">Keybinds</h3>
+<div class="admonition note">
+<p class="admonition-title">These are rebindable!</p>
+</div>
+<p>This is a list of all the keybinds the editor uses, grouping is the same as the settings menu in-editor.</p>
+<details class="info">
+<summary>File</summary>
+<p><code>Ctrl + N</code>  - Creates a new chart</p>
+<p><code>Ctrl + O</code> - Opens an existing chart</p>
+<p><code>Ctrl + S</code> - Saves the current chart</p>
+<p><code>Ctrl + Shift + S</code> - Saves the current chart with a new file name or location</p>
+<p><code>Ctrl + Alt + S</code> - Opens the settings menu</p>
+</details>
+<details class="info">
+<summary>Edit</summary>
+<p><code>Ctrl + Z</code> - Undoes the previous action</p>
+<p><code>Ctrl + Y</code> - Redoes the previous action</p>
+<p><code>Ctrl + X</code> - Cuts the selected note(s)</p>
+<p><code>Ctrl + C</code> - Copies the selected note(s)</p>
+<p><code>Ctrl + V</code> - Pastes the copied note(s)</p>
+</details>
+<details class="info">
+<summary>Playback</summary>
+<p><code>Space</code> - Begin playback</p>
+<p><code>Ctrl + L</code> - Toggle Loop</p>
+<p><code>Ctrl + ,</code> - Set Loop Start</p>
+<p><code>Ctrl + .</code> - Set Loop End</p>
+<p><code>Add</code> - Increase playback speed</p>
+<p><code>Subtract</code> - Decrease playback speed</p>
+<p><code>Right</code> - Jump Measure Forward</p>
+<p><code>Left</code> - Jump measure back</p>
+<p><code>Up</code> - Jump Beat Forward</p>
+<p><code>Down</code> - Jump Beat Back</p>
+<p><code>Ctrl + K</code> - Add Comment</p>
+</details>
+<details class="info">
+<summary>Selection</summary>
+<p><code>Shift + W</code> - Highlight Next Note</p>
+<p><code>Shift + S</code> -  Highlight Previous Note</p>
+<p><code>Shift + Q</code> - Highlight Nearest Note</p>
+<p><code>A</code> - Select All</p>
+<p><code>Alt + A</code> - Deselect All</p>
+<p><code>Shift + Alt + A</code> - Checker Deselect</p>
+<p><code>Ctrl + B</code> - Box Select</p>
+<p><code>Shift + Space</code> - Select Highlighted Note</p>
+<p><code>Shift + R</code> - Select Note Collection References</p>
+</details>
+<details class="info">
+<summary>Edit Note Collections</summary>
+<p><code>Return</code> - End Note Collection</p>
+<p><code>Shift + Return</code> - Edit Note Collection</p>
+<p><code>Shift + B</code> - Bake Selected Notes</p>
+<p><code>Ctrl + Shift + B</code> - Bake Selected Notes [No Render]</p>
+<p><code>Ctrl + H</code> - Stitch Note Collection</p>
+<p><code>Alt + H</code> - Split Note Collection</p>
+<p><code>Shift + H</code> - Insert Segment</p>
+<p><code>Ctrl + Delete</code> - Delete No-Render Segments</p>
+</details>
+<details class="info">
+<summary>Edit Notes</summary>
+<p><code>I</code> - Insert a note at current size and position</p>
+<p><code>Shift + E</code> - Edit selected notes' shape</p>
+<p><code>Ctrl + E</code> - Edit selected notes' type</p>
+<p><code>Ctrl + Shift + E</code> - Edit selected notes' shape and type</p>
+<p><code>Shift + M</code> - Mirror current selection</p>
+<p><code>Ctrl + R</code> - Reverse current selection</p>
+<p><code>Delete</code> - Deletes current selection</p>
+<p><code>Shift + Up</code> - Increase selected notes' size 1 unit</p>
+<p><code>Shift + Down</code> - Decrease selected notes' size 1 unit</p>
+<p><code>Shift + Right</code> - Shift selected notes right one unit</p>
+<p><code>Shift + Left</code> - Shift selected notes left one unit</p>
+<p><code>Ctrl + Shift + Up</code> - Increase the first selected notes` size by one, second by two, third by three, etc.</p>
+<p><code>Ctrl + Shift + Down</code> - Decrease the first selected notes` size by one, second by two, third by three, etc.</p>
+<p><code>Ctrl + Shift + Right</code> - Shift the first selected note right by one, second by two, third by three, etc.</p>
+<p><code>Ctrl + Shift + Left</code> - Shift the first selected note left by one, second by two, third by three, etc.</p>
+<p><code>Ctrl + Up</code> - Shift selected notes forward in time</p>
+<p><code>Ctrl + Down</code> - Shift selected notes backward in time</p>
+<p><code>V</code> - Set hold segment render flag to true</p>
+<p><code>Alt + V</code> - Set hold segment render flag to false</p>
+<p><code>Ctrl + M</code> - Flip note direction</p>
+<p><code>Ctrl + N</code> - Convert to instant mask</p>
+<p><code>Shift + P</code> - Paint Selected Traces</p>
+<p><code>Shift + L</code> - Set Scroll Layer</p>
+</details>
+<details class="info">
+<summary>Note Types</summary>
+<p><code>1</code> - Set note type: Touch</p>
+<p><code>2</code> - Set note type: Slide (Clockwise)</p>
+<p><code>3</code> - Set note type: Slide (Counterclockwise)</p>
+<p><code>4</code> - Set note type: Snap (Forward)</p>
+<p><code>5</code> - Set note type: Snap (Backward)</p>
+<p><code>6</code> - Set note type: Chain</p>
+<p><code>7</code> - Set note type: Hold</p>
+<p><code>8</code> - Set note type: Add Mask</p>
+<p><code>9</code> - Set note type: Remove Mask</p>
+<p><code>0</code> - Set note type: Trace</p>
+<p><code>oem4</code> - Set note type: Damage</p>
+<p><code>Shift + 1</code> - Select note modifier: None (If using masks, set mask style to clockwise)</p>
+<p><code>Shift + 2</code> - Select note modifier: Bonus (If using masks, set mask style to counterclockwise)</p>
+<p><code>Shift + 3</code> - Select note modifier: R-Note (If using masks, set mask style to center)</p>
+</details>
+<details class="info">
+<summary>Rendering</summary>
+<p><code>Shift + Add</code> - Increase note speed</p>
+<p><code>Shift + Subtract</code> - Decrease note speed</p>
+</details>
+<h3 id="user-interface">User Interface</h3>
+<h4 id="top">Top</h4>
+<details class="info">
+<summary>File</summary>
+<p><h3><code>New</code> - Create a new chart<h3>
+<h3><code>Open</code> - Open an existing chart</h3>
+<h3><code>Save</code> - Save the current chart</h3>
+<h3><code>Save As</code> - Save the current chart with a new name or location</h3></p>
+<hr />
+<p><h2><strong>Export</strong></h2>
+<h3><code>Export for Mercury</code> - Exports in a format compatible with WACCA</h3>
+<h3><code>Export for Saturn/Create Saturn Folder</code> - Exports for use in <a href="https://saturn.yasu3d.art/docs/#/">Saturn</a></h3></p>
+<hr />
+<p><h2><strong>Online</strong></h2>
+<h3><code>Create Session</code> - Creates an online session that other people can join.</h3>
+<h3><code>Join Session</code> - Join someone elses' online session</h3>
+<h3><code>Disconnect</code> - Disconnect from the current session</h3></p>
+<hr />
+<p><h3><code>Settings</code> - Open the settings menu</h3></p>
+<hr />
+<p><h3><code>Exit</code> - Closes the MercuryMapper program</h3></p>
+</details>
+<details class="info">
+<summary>Edit</summary>
+<p><h3><code>Undo</code>- Undoes the last action</h3>
+<h3><code>Redo</code>- Redoes the last undone action</h3></p>
+<hr />
+<p><h3><code>Cut</code> - Copy and delete current selection</h3>
+<h3><code>Copy</code> - Copy current selection</h3>
+<h3><code>Paste</code> - Paste current selection at current position</h3></p>
+</details>
+<details class="info">
+<summary>Select</summary>
+<p><h3><code>Select All</code> - Selects all objects</h3>
+<h3><code>Deselect All</code> - Deselects all objects</h3>
+<h3><code>Checker Deselect</code> - Deselects every other selected object, starting with the first selected note</p>
+<hr />
+<p><h2><strong>Select Similar</strong></h2>
+<h3>Selects similar notes to the one highlighted</h3>
+<h3><code>Filter Selection</code> - De-selects every note that doesn't match the filter</h3>
+<h3><code>Threshold</code> - How many units of variance is tolerated (Ex: a size 10 note with a threshold of 2 will select size 8-12 notes but not size 13+/7- notes)</h3></p>
+<hr />
+<p><h3><code>Box Select</code> - Creates a box that selects everything that is inside of it. When activated, the user will be given a note-style object that they can shape by clicking and dragging around the ring to define width, after the mouse is released the cursor can be moved to change depth, a final click will finalize the selection.</h3></p>
+<hr />
+<p><h3><code>Select Note Collection References</code> - Selects all segments in note collections that currently have selected segments</h3>
+<h3><code>Select Highlighted Note</code> - Selects the highlighted (red) note</h3></p>
+</details>
+<details class="info">
+<summary>Tools</summary>
+<p><h3><code>Mirror Chart</code> - Mirrors the chart on the current axis set in <code>Modify Notes - Mirror Axis</code></h3>
+<h3><code>Shift Chart</code> - Shifts the chart by specified amount, useful for (re)syncing a chart to audio</h3></p>
+<hr />
+<p><h3><code>Fix off-by-one Errors</code> - Rounds the timestamps of all non-hold-segment notes to the nearest 10s digit. (Ex: 1919 &gt; 1920, 479 &gt; 480, 241 &gt; 240)</h3></p>
+<hr />
+<p><h3><code>Scale Selection</code> - Changes the time scale of the currently selected notes. Values below one will bring the notes closer together in time, while values above one will increase the distance</h3></p>
+<hr />
+<p><h2><strong>Reconstruct Note Collections</strong></h2>
+    <h3>Applies to entire note collection, even if only part is selected</h3>
+    <h3><code>Collection to Collection</code> - Re-traces a note collection with a fixed interval between segments, useful for making extra segments to use with jagged note collections</h3>
+    <h3><code>Note Collection to Chain</code> - Same as Collection to Collection, but segments are converted to chains afterward, useful for creating slides with chains or overlaying chains on a hold</h3></p>
+<hr />
+<p><h3><code>Generate Jagged Note Collections</code> - Moves segments of the hold to give it a jagged shape, reconstruct holds can be used to increase segment density for denser spikes.</h3></p>
+<hr />
+<p><h3><code>Proofread</code> - Checks for problems with your chart, very sensitive so will point out legal patterns. It's recommended to check anywhere it warns to ensure the chart follows good practices.</h3></p>
+</details>
+<h4 id="left">Left</h4>
+<div comment="very ugly, should be replaced"></div>
+<p><img alt="Bottom UI" src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/UI_Left.png" title="Bottom UI" /></p>
+<h4 id="right">Right</h4>
+<details class="info">
+<summary>Chart Info</summary>
+<p><h3>The Current Filename</h3></p>
+<hr />
+<p><h3>Assorted Note Count Statistics</h3></p>
+<hr />
+<p><h3><code>Version</code> - The version of the chart, this not displayed in-game</h3>
+<h3><code>Title</code> - The title of the song</h3>
+<h3><code>Ruby</code> - The title with the kana reading of the kanji, used for sorting/bingo.</h3>
+<h4><ul><li>For latin alphabet - full width characters can be found at: <a href="https://lingojam.com/FullWidthTextGenerator">https://lingojam.com/FullWidthTextGenerator</a></li><li>For kanji and kana - hiragana: <a href="https://www.lexilogos.com/keyboard/hiragana.htm">https://www.lexilogos.com/keyboard/hiragana.htm</a></li><li>Alternatively, <a href="https://romajidesu.com/translator/">https://romajidesu.com/translator/</a> - click "Kana" instead of "Romaji"</li></ul></h4>
+<h3><code>Artist</code> - The author of the song</h3>
+<h3><code>Chart Author</code> - The author of the chart, probably you</h3>
+<h3><code>BPM Text</code> - The BPM to display on the Song Select Screen.</h3></p>
+<hr />
+<p><h3><code>Chart Background</code> - Saturn only, changes the styling of the background during gameplay.</h3></p>
+<hr />
+<p><h3><code>Diff(iculty)</code> - The difficulty level of the chart, includes a 5th option of <code>WORLD'S END</code> in reference to Chunithm that is used for experimental/joke charts.</h3>
+<h3><code>Level</code> - The decimal difficulty value
+<h4><ul><li>The game starts '+' values at .7, so a 13.6 is a 13 while a 13.7 is a 13+</li><li>The game doesn't support 14+, so difficulties of 14.7-14.9 should be avoided</li></ul></h4>
+<h3><code>Clear Threshold</code> - Determines how much score is needed to clear</h3>
+<h4><ul><li>It's recommended to use <code>0.5</code> for Normal, <code>0.6</code> for Hard, and <code>0.83</code> for Expert/Inferno</li></ul></h4></p>
+<hr />
+<p><h3><code>Preview</code> - Preview start/length fields are the time in seconds for where the preview starts/how long it lasts respectively</h3>
+<h4><ul><li>The preview time is used for what is heard during song select and song preview</li><li>The preview button will play the section that would be previewed and then stop</li></ul></h4></p>
+<hr />
+<p><h3><code>BGM Offset</code> - Offsets the audio relative to the chart, it's recommended to synchronize the audio itself (see: <a href="https://siamesederp.github.io/MercuryMapper-Tutorial/Editor/#setting-up-audio">Setting Up Audio</a>)</h3>
+<h3><code>BGM</code> - Button to select the audio file for the chart, displays the currently loaded BGMs' filename below the selection button</h3></p>
+<hr />
+<p><h3><code>BGA</code> - The <code>Background Animation</code> (aka Movie/Video), does not display in-editor</h3></p>
+<hr />
+<p><h3><code>Jacket</code> - The jacket is the image for the song (aka album art, cover, etc)</h3>
+<h4><ul><li>Has current jacket filename displayed over the jacket selection button</li><li>Current jacket is shown below the button</li></ul><h4></p>
+</details>
+<details class="info">
+<summary>Selection Info</summary>
+<p><h3>Shows how many notes are selected (this info also appears in blue text next to the gimmick selector)</h3>
+<h3>Main use is to change the highlighted note/view information about the currently highlighted note</h3></p>
+</details>
+<details class="info">
+<summary>Quick Settings</summary>
+<p><h3><code>Note Speed</code> - How fast the notes scroll during playback, values are the same as scroll speed in WACCA</h3>
+<h3><code>Beat Division</code> - The amount of grey beat lines per measure</h3>
+<h3><code>Show Speed Changes</code> - Toggles if speed changes are shown both while editing and during playback, includes stops, useful for doing complex HiSpeed sections</h3>
+<h3><code>Draw No-Render Holds</code> - No-Render hold segments are used exclusively for judgement, and as the name implies, are not rendered</h3></p>
+<hr />
+<p><h3><code>Show Timing Windows</code> - Shows the timing windows of each note</h3>
+<h4><ul><li>It's recommended to enable <code>Cut Early on Holds</code> and <code>Cut Overlapping</code> with all windows enabled to ensure all patterns are possible/fair to hit, see <a href="https://siamesederp.github.io/MercuryMapper-Tutorial/Charting#note-judgement">Game Mechanics</a> for more info</li></ul></h4></p>
+<hr />
+<p><h3><code>Music Volume</code> - A controls music volume
+<h3><code>Hitsound Volume</code> - Changes all hitsounds volume</h3>
+<h3><code>Start Metronome</code> - The metronome that plays for 1 measure at the start of the chart</h3>
+<h3><code>Constant Metronome</code> - A constant metronome</h3></p>
+</details>
+<details class="info">
+<summary>Modify Notes</summary>
+<p><h3><code>Edit [Shape only]</code> - Changes the selected note(s) size and position to be that of the cursor.</h3>
+<h3><code>Edit [Type only]</code> - Changes the selected note(s) type to be that of the cursor, includes bonus type.</h3>
+<h3><code>Edit Selection</code> - Changes both the shape and type of the selected note(s) to be that of the cursor</h3>
+<h3><code>Delete Selection</code> - Deletes all currently selected objects</h3></p>
+<hr />
+<p><h3><code>Mirror Axis</code> - Change the axis on which mirror operations are performed (visualized by a white line on hover)</h3>
+<h3><code>Mirror</code> - Mirror all currently selected notes along the mirror axis</h3>
+<h3><code>Reverse</code> - Reverse the order in time of the currently selected notes</h3>
+<h4><ul><li>Example: if you have a chain selected at measure 1, and a tap selected at measure 2, this button will move the tap to measure one and the chain to measure 2</h4></ul></li></p>
+<hr />
+<p><h3><code>Flip Note Direction</code> - Flips the direction of a Slide, Snap, or Mask without mirroring it's position</h3>
+<h3><code>Convert to Instant Mask</code> - Subdivides the currently selected mask to smaller pieces to cause the mask to instantly add/remove the section</h3></p>
+<hr />
+<p><h3><code>Trace Color</code> - Sets the color for the next placed traces</h3>
+<h3><code>Paint Selected Traces</code> - Applies the selected color to all selected traces</h3>
+<div comment = "scroll layer shit?" style = "display:none"></p>
+<hr />
+<p><h3><code>Scroll Layer</code></h3>
+</div></p>
+<hr />
+<p><h3><code>Hold Bake/Ease</code> - Bake hold will fill the area between a selected segment of a hold and the next segment of a hold with more segments to achieve a smoother result</h3>
+<h4><ul><li>The easing type to the left of the bake button determines where the inserted segments are placed</li><li>If you want your non-linear eases to look closer to official charting (see: less smooth), use eases and then reconstruct hold to 1/16th intervals. After that delete any unnecessary extras, and bake linearly.</li><li>Examples of non-linear curves can be seen <a href="https://easings.net/">at this website</a></li></ul></h4>
+<h3><code>Insert Segment</code> - Inserts a hold segment at the current time with the same size/position as the cursor in a hold if one of its' segments are highlighted.</h3></p>
+<hr />
+<p><h3><code>Stitch Note Collection</code> - If only a hold end and a hold start are selected, they will fuse into a singular hold.</h3>
+<h3><code>Split Note Collection</code> - Splits a hold in two at the highlighted segment</h3></p>
+<hr />
+<p><h3><code>Set Render Type</code> - No-Render hold segments are used exclusively for judgement, and as the name implies, are not rendered</h3></p>
+<hr />
+<p><h3><code>Delete No-Render Segments</code> - Deletes all selected No-Render segments</h3></p>
+</details>
+<details class="info">
+<summary>Miscellaneous</summary>
+<p><h3><code>Add Comment</code> - Adds a comment at the current measure.</h3>
+<h3><code>Set Loop Start/End</code> - Place either a loop start or loop end at the current measure, visualized on the playback slider as a green and red line respectively</h3></p>
+</details>
+<h4 id="bottom">Bottom</h4>
+<div comment="very ugly, should be replaced"></div>
+<p><img alt="Bottom UI" src="https://raw.githubusercontent.com/siamesederp/MercuryMapper-Tutorial/refs/heads/main/images/UI_Bottom.png" title="Bottom UI" /></p>
+<h3 id="settings">Settings</h3>
+<div comment = "Need to finish" style = "display:none">
+??? info "Appearance"
+    <h2>***Colors***</h2>
+    <h2>***Rendering***</h2>
+</div>
+<details class="info">
+<summary>Editor</summary>
+<p><h3><code>Quantize on Pause</code> - Whenever you pause, snaps to the nearest beat based on your beat division. (Highly recommended)</h3>
+<h3><code>Highlight Placed Note</code> - Automatically highlight a note when you place it.</h3>
+<h3><code>Limit to Mercury Bonus Types</code> - If unchecked, allows bonuses to be used on any note (Not compatible if charting for mercury).</h3></p>
+</details>
+<div comment = "Need to finish" style = "display:none">
+    <h2>**Keymap**</h2>
+    <h3>Change the bindings for keys, see [Keybinds](#keybinds) for functions and default binds</h3>
+    <h2>**Audio**</h2>
+    <h3>`Hitsound Offset`</h3>
+    <h3>`Mute Hitsounds on preview`</h3>
+    <h3>`Start Metronome`</h3>
+    <h3>`Constant Metronome`</h3>
+</div>
+
+<h3 id="note-placement">Note Placement</h3>
+<ul>
+<li>You can adjust note size and position by clicking and dragging in the viewport or with the sliders found in Current Note Settings on the left.</li>
+<li>Place notes by pressing <code>I</code> or by clicking the button under those sliders.</li>
+<li>Select note type with the colored buttons in the top left or by pressing number keys.</li>
+<li>Place Bonus/R Notes by using the buttons under the note type panel to change bonus type.</li>
+</ul>
+<h4 id="holds">Holds</h4>
+<ul>
+<li>Once you place a hold note, you can only place hold segments until you finish the hold note.</li>
+<li>To finish a hold note place the last segment and then click the <code>End Note Collection</code> button next to the insert button.</li>
+</ul>
+<h4 id="selecting-editing-deleting">Selecting, Editing, Deleting</h4>
+<ul>
+<li>To select a specific note, <code>Ctrl + Left Click</code> or scroll to it and click <code>Nearest</code> in the <code>Selection Info</code> tab. If there are multiple notes at once, you can click <code>&lt; Previous</code> or <code>Next &gt;</code> while highlighing to cycle though them.</li>
+<li>Highlighting and Selecting are two different things<ul>
+<li>Highlighting (Red) is used to select certain notes (useful when overlaps are present) and to view information in the <code>Selection Info</code> tab</li>
+<li>Selecting (Blue) doesn't show info in the <code>Selection Info</code> tab and can select multiple notes at once.</li>
+</ul>
+</li>
+<li>To delete a note, either undo with <code>Ctrl + Z</code> or select a note and press <code>Delete</code>/click <code>Delete Selection</code> in the <code>Modify Notes</code> tab.</li>
+<li>To edit the type/size, you can use the edit note keybinds or use the <code>Edit [Shape]</code> and <code>Edit [Type]</code> buttons to change the selected note into the shape/type of the currently selected shape/type.</li>
+<li>MercuryMapper converts copied sections to text in modern versions, so you can paste between windows or even paste into discord to share a pattern.</li>
+</ul>
+<h3 id="gimmicks">Gimmicks</h3>
+<h4 id="hi-speed">Hi-Speed</h4>
+<ul>
+<li>Can be used to slow down or speed up the scroll speed</li>
+<li>If a hold that moves/changes size is in the view port during a really slow hispeed (under 0.01), the game may have issues/crash.</li>
+</ul>
+<h4 id="stop">Stop</h4>
+<ul>
+<li>Stops the movement of notes, effectively a 0 hispeed</li>
+<li>Mixing Stop gimmicks with Hi-Speed gimmicks will result in unintended behavior, so it is generally not recommended (does not apply to Saturn)</li>
+</ul>
+<h4 id="reverse">Reverse</h4>
+<ul>
+<li>Creates a section where notes scroll backward before playing back normally</li>
+<li>Almost exclusively used when referencing another game that does it</li>
+<li>Mixing Reverse gimmicks with any other gimmick <em>will</em> cause crashes. Please leave plenty of space after the reverse end</li>
+</ul>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 29, 2025 09:30:10">April 29, 2025</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.tooltips"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
